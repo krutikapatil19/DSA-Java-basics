@@ -1,4 +1,4 @@
-public class FindElement {
+public class findElement {
     public static void main(String [] args){
         
         int[]arr = {5,7,8,10,9,6};
