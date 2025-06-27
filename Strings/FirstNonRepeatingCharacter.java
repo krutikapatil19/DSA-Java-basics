@@ -1,7 +1,7 @@
 public class FirstNonRepeatingCharacter {
     public static void main(String[] args){
 
-    String str = "Krutika".toLowerCase();
+    String str = "KrutikaPatil".toLowerCase();
 
     int[] freq = new int[256];     //array to count frequency of characters using ASCII, 256 slots as there are 256 ASCII characters
     
