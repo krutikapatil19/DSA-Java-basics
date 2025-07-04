@@ -11,7 +11,7 @@ public class KadanesEdgeCases {
         boolean allZero = true;                     //we asssume the allZero and allNegative as true unless proven false
         boolean allNegative = true;
 
-        int start=0 , tempStart = 0, end = 0;
+        int start=0 , tempStart = 0, end = 0;       //tempStart is the starting index of CurrentSubarray, end is the ending Index
 
         for(int i=0; i < arr.length ; i++){
             
