@@ -18,7 +18,7 @@ public class countCharacters {
         else if (Character.isDigit(ch)){                                        //if its a digit , then digit++
             digits++;
         }
-        else if(Character.isWhitespace(ch)){                                    //if its a whitespace , then whitespace++
+        else if(Character.isWhitespace(ch)){                                    //if its a whitespace , then whitesp++
             spaces++;
         }
         }
