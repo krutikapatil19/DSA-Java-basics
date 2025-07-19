@@ -5,9 +5,9 @@ public class BuyAndSellStock {
 
 
         for(int i =0;i<prices.length;i++){
-            if(prices[i]<minPrice){
+            if(prices[i]<minPrice){                                     //check whether today's price is lesser than minPrice
                 minPrice =prices[i];                                    //update to new minimum
-            }else if(prices[i] - minPrice > maxProfit){                 //if today's price is not less than minPrice , it means it is greater , then checking for profit 
+            }else if(prices[i] - minPrice > maxProfit){                 //if today's price is not less than minPrice , it means it is greater , then comparing profit profit , by subtracting minPrice from todays price and comparing it with maxProfit , if its giving more profit . then we set it to maxProfit.
                 maxProfit = prices[i] - minPrice;                       //calculates profit 
             }
         }
@@ -17,8 +17,10 @@ public class BuyAndSellStock {
 public static void main(String[] args){
     int[] prices ={7,1,10,5,2};
     int result = maxProfit(prices);
+
     System.out.println("Max profit is : " + result);
 }
 }
+
 
 
