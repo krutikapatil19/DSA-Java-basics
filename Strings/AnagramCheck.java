@@ -1,5 +1,5 @@
-import java.util.Arrays;
-public class anagram {
+    import java.util.Arrays;
+public class AnagramCheck {
     public static void main(String[] args){
         String str1= "silent";
         String str2= "listen";
@@ -24,3 +24,6 @@ public class anagram {
     }
     
 }
+
+    
+
