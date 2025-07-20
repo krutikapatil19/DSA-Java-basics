@@ -1,15 +1,20 @@
-public class reverseString {
-    public static void main(String[] args){
+public class reverseString{
+    public String reverseString(String str){                        //method to reverse the given string
+        String reversed = "";                                       //empty string to store the reversed result
 
-        String str = "I love solving String questions";
-        String reversed = "";
-
-        for(int i = str.length()- 1; i>=0; i--){  //started from last element, then i--
-            reversed += str.charAt(i); //concatenating in reverse
+        for(int i = str.length()- 1 ; i>=0 ; i--){                  //loop starts from the last character and goes till the first 
+            reversed += str.charAt(i);                              //starting from the last character of string , and then concatenate the letters from the end to the front
         }
-
-        System.out.println("Original String : " + str);
-        System.out.println("Reversed String : " + reversed);
+        return reversed;                                            //returns the reversed string 
     }
-    
+public static void main(String[] args){
+    reverseString obj = new reverseString();                        //create object to call the method
+
+    String input = "I love solving string questions";               //input string
+    String result = obj.reverseString(input);                       //call the method and store result 
+
+    System.out.println("Original String :" + input);
+    System.out.println("Reversed String: " + result);
+
+}
 }
