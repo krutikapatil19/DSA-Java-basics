@@ -1,35 +1,32 @@
 public class FirstNonRepeatingCharacter {
-    public static void main(String[] args){
-
-    String str = "KrutikaPatil".toLowerCase();
-
-    int[] freq = new int[256];     //array to count frequency of characters using ASCII, 256 slots as there are 256 ASCII characters
+ public char firstNonRepeatingChar(String str){
     
-        //step1:count frequencies
-        for(int i=0;i<str.length();i++){
+    str = str.toLowerCase();                //converting input to lowercase
+    int[] freq = new int[256];              //array to count frequency of characters using ASCII, 256 slots as there are 256 ASCII characters
+    
+        //step1:count frequency of each character
+        for(int i=0; i<str.length(); i++){
             char ch = str.charAt(i);        //pointer used to point at current element or character
-            freq[ch]++;                     //increases count at that index
+            freq[ch]++;                     //when a character appears multiple times , its count increases.
+            }
             
-    }
-
-    //find first non-repeating character
-
-    boolean found = false; //flag to check if we found one 
-
-    for(int i =0;i<str.length();i++){
+    //Step2 : Find first non-repeating character
+        for(int i =0; i<str.length(); i++){
         char ch = str.charAt(i);
-        if (freq[ch] == 1) {
-            System.out.println("First non repeating character is :" + ch);
-            found = true;
-            break;
+        if (freq[ch] == 1) {                //checks if the frequency of the character is equal to 1 , or if the character appears only once. 
+            return ch;                      //return that character immediately
         }
     }
-            if(!found){
-                System.out.println("No non-repeating character found");
-        }
+        return '-';                         //Return '-' if no non-repeating character found 
+        
+    }
+    public static void main(String[] args){
+        FirstNonRepeatingCharacter obj = new FirstNonRepeatingCharacter();
+        String str = "KrutikaPatil";
+        char result = obj.firstNonRepeatingChar(str);
+        System.out.println("First non-repeating character:" + result);
     }
 }
-    
 
 
     
