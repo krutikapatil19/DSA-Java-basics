@@ -1,29 +1,32 @@
-    import java.util.Arrays;
-public class AnagramCheck {
-    public static void main(String[] args){
-        String str1= "silent";
-        String str2= "listen";
+import java.util.Arrays;
+public class AnagramCheck{
+    public static boolean isAnagram(String str1, String str2) {
 
-        //convert both strings to lowercase and char arrays
+        //If lengths are not equal ,the strings cant't be anagrams
+        if(str1.length() != str2.length()) return false;
 
-        char[] arr1 = str1.toLowerCase().toCharArray();         //converted to char , as string dont support sorting support , and are immutable , sorting is done to compare in easy way
-        char[] arr2 = str2.toLowerCase().toCharArray();         //lowercase is done for all letters , as java identifies Mand m as different
+        //convert strings to lowercase and then to char arrays 
+        char[] arr1 = str1.toLowerCase().toCharArray();
+        char[] arr2 = str2.toLowerCase().toCharArray();
 
-        //sort both arrays
-
-        Arrays.sort(arr1);                          //sorting is done to arrange the elements in a order  to check if the strings are equal
+        // Sort both character arrays
+        Arrays.sort(arr1);
         Arrays.sort(arr2);
 
-        if(Arrays.equals(arr1,arr2)){
-            System.out.println("Strings are anagram");
-        }else{
+        // Return true if both sorted arrays of strings have same character in same order 
+        return Arrays.equals(arr1,arr2);
+    }
+    public static void main(String[] args){
+        String str1 = "silent";
+        String str2 = "listen";
+
+        if(isAnagram(str1, str2)) {
+           System.out.println("Strings are anagram"); 
+        }else {
             System.out.println("Strings are not anagram");
         }
 
-
     }
-    
 }
-
     
 
