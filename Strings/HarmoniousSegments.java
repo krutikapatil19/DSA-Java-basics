@@ -2,29 +2,32 @@
  public class HarmoniousSegments {
     public static int countHarmoniousSegments(String[] input) {
         String s = input[0];
-        int k = Integer.parseInt(input[1]);                                     //The number to check divisibility with
-        int count = 0;                                                          //To count how many harmonious segments we find
+        int k = Integer.parseInt(input[1]);
+        int count = 0;
 
-        //Loop through every starting point of the substring
-        for(int i =0; i< s.length(); i++){
-            int melodic = 0 , rhythmic = 0;                                     //Start with 0 melodic & rhythmic notes
+        for(int i = 0; i<s.length(); i++) {                                                 //outer for loop  //chooses the start of the substring 
+            int vowels = 0, consonants = 0;
 
-
-            for(int j = i; j<s.length(); j ++){                                //Loop through every ending point from i to end of string
+            for(int j = i; j<s.length(); j++) {                                             //inner for loop  //check all end points from i 
                 char ch = s.charAt(j);
-                if("aeiou".indexOf(ch) >= 0)melodic++;                         //check if its a vowel
-                else rhythmic++;
+                if (isVowel(ch)) vowels++;
+                else consonants++;
 
-                if(melodic == rhythmic && (melodic*rhythmic) % k == 0)
-                count++;
+
+                if(vowels == consonants && (vowels*consonants) % k == 0){                       //if the number of vowels and consonants are equal ,and (vowels*consonants) is divisible by the given number "k", then add that substring and increase count.
+                    count++;
+                }
             }
         }
-        return count;                                                         //return the total harmonious segments
+        return count;
     }
 
-    public static void main(String[] args){
-        System.out.println(countHarmoniousSegments(new String[] {"baeyh", "2"}));
-        System.out.println(countHarmoniousSegments(new String[] {"bcdf", "1"}));   
+    private static boolean isVowel(char ch) {
+        return "aeiouAEIOU".indexOf(ch) != -1;
     }
-    
+
+    public static void main(String[] args) {
+        System.out.println(countHarmoniousSegments(new String[]{"baeyh", "2"}));
+        System.out.println(countHarmoniousSegments(new String[]{"bcdf", "1"}));
+    }
 }
