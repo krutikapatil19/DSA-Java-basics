@@ -1,4 +1,5 @@
-public class HarmoniousSegments {
+ //Find the number of substrings where the count of vowels and consonants are equal, and their product is divisible by a given number
+ public class HarmoniousSegments {
     public static int countHarmoniousSegments(String[] input) {
         String s = input[0];
         int k = Integer.parseInt(input[1]);                                     //The number to check divisibility with
