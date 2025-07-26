@@ -1,3 +1,4 @@
+//Find the Longest Common Prefix among a group of strings
 public class LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";                                            //if array is empty , return empty prefix
