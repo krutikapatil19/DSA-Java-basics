@@ -12,12 +12,11 @@ public class LongestCommonPrefix {
         }
         return prefix;          
     }
-
     public static void main(String[] args) {
         String[] input = {"flower","flow","flowingwater"};                         //input words
         LongestCommonPrefix obj = new LongestCommonPrefix();
         String result = obj.longestCommonPrefix(input);
-        System.out.println("Longest Common Prefix: "+ result);
+        System.out.println("Longest Common Prefix: "+ result);  
     }
     }
 
