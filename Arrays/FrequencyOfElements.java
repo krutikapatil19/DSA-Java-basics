@@ -1,3 +1,5 @@
+//used brute force approach (used nested loops and flags). Time complexity: 0(n^2)
+//This code can also be done using HashMap , as it takes 0(n) , I've saved that one in the Hashing Folder
 public class FrequencyOfElements{
     public static void main(String[] args){
 
