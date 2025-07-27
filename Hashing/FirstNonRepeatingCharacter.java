@@ -19,9 +19,8 @@ public class FirstNonRepeatingCharacter {
                 return ch;
             }
         }
-        return '-';                     //if none found , return '-'
+        return '-';                                                 //if none found , return '-'
     }
-
     public static void main(String[] args) {
         FirstNonRepeatingCharacter obj = new FirstNonRepeatingCharacter();
         String str = "KrutikaPatil";
