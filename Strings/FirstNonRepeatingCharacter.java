@@ -1,3 +1,5 @@
+//I used a frequency array(ASCII) in this code
+//The same code can also be done using HashMap method , mentioned that one in Hashing Folder.
 public class FirstNonRepeatingCharacter {
  public char firstNonRepeatingChar(String str){
     
