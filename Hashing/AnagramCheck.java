@@ -15,7 +15,7 @@ public class AnagramCheck {
 
         // Count characters in str1
         for (char ch : str1.toCharArray()) {                          //get each character from string1
-            map.put(ch, map.getOrDefault(ch, 0) + 1);                 //get how many times the letter was there in the string , if it wasnt there , consider it 0 and add 1 , or increase the count , if it was already there.
+            map.put(ch, map.getOrDefault(ch, 0) + 1);    //get how many times the letter was there in the string , if it wasnt there , consider it 0 and add 1 , or increase the count , if it was already there.
         }
 
         // Subtract character counts using str2
