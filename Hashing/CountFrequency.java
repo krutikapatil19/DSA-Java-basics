@@ -1,3 +1,4 @@
+//Count Frequency of Each Element in an Array using HashMap approach
 import java.util.HashMap;
 
 public class CountFrequency {
