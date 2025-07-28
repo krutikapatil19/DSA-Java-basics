@@ -1,3 +1,5 @@
+//I've solved this problem using the sorting approach .
+//It can also be solved using the HashMap , I've mentioned that one in the Hashing Folder
 import java.util.Arrays;
 public class AnagramCheck{
     public static boolean isAnagram(String str1, String str2) {
