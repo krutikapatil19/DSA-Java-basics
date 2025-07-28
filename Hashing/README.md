@@ -9,7 +9,7 @@ You take a value (like a name or number) → call it a key.
 You apply a hash function to convert this key into a number.
 This number becomes an index of an array where your data will be stored.
 
-## Why use Hashing?
+### Why use Hashing?
 
 Fast access to data → No need to search through the whole array.
 Keys can be very large, so we convert them to a smaller index using a hash function.
