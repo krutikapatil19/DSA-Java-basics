@@ -2,8 +2,6 @@
 //ex: if the array is of length 8 , then n/3 = 8/3 = 2 , so print all the elements appearing more than 2 times.
 import java.util.HashMap;
 
-import java.util.HashMap;
-
 public class ElementsOccuringMoreThanNTimes{
     public static void ElementWithNFrequency(int[] arr){
         HashMap <Integer, Integer> map = new HashMap <> ();
