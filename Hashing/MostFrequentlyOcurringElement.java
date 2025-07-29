@@ -20,7 +20,7 @@ public class MostFrequentlyOcurringElement {
         for(int key : map.keySet()) {
             if(map.get(key) > maxFreq) {
                 maxFreq = map.get(key);
-                maxElement = key;
+                maxElement = key;                
             }
         }
         return maxElement;
