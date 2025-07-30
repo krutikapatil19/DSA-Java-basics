@@ -4,7 +4,7 @@ public class LinearSearch {
 
         for(int i =0; i<arr.length; i++){
             if(arr[i] == key){
-                return i;                                       //returns the index of the element foun
+                return i;                                       //returns the index of the element found
             }
         }
         return -1;                                             //return -1 if the element not found                     
