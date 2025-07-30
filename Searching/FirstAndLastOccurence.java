@@ -1,5 +1,7 @@
 public class FirstAndLastOccurence{
-    public static int FirstAndLastOccuringElement(int[] arr, int key){
+
+    //Find first Occurrence
+    public static int firstOccurrence(int[] arr, int key){
         
         int start = 0;
         int end = arr.length - 1;
@@ -19,6 +21,8 @@ public class FirstAndLastOccurence{
         }
         return -1;                                                      //element not found
     }
+
+    //Find Last Occurence
     public static int lastOccurrence(int[] arr, int key){
         int start = 0;
         int end = arr.length - 1;
@@ -29,17 +33,21 @@ public class FirstAndLastOccurence{
             if(key == arr[mid] && (mid == arr.length-1 || arr[mid+1] != key)){
                 return mid;                                             //last occurence found
             }
+            else if (key < arr[mid]){
+                end = mid - 1;
+            }
             else{
                 start = mid + 1;                                        //element not found
             }
         }
-
-        public static void main(String[] args) {
+        return -1;
+    }
+            public static void main(String[] args) {
             int[] arr = {2,4,4,6,9,6,9};
             int key = 4;
 
-            int first = firstOccurence(arr, key);
-            int last = lastOccurence(arr, key);
+            int first = firstOccurrence(arr, key);
+            int last = lastOccurrence(arr, key);
 
             if(first != -1 && last != -1){
             System.out.println("The First Occurence of " + key + "is at index : " + first);
