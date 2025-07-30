@@ -1,3 +1,4 @@
+//Binary search only works on Sorted Array
 package Searching;
 
 public class BinarySearch {
@@ -12,6 +13,7 @@ public class BinarySearch {
             if(key == arr[mid]){
                 return mid;                             //element found in the middle
                 }
+
                 else if (key > arr[mid]){
                         start = mid+1;                  //searches in the right half
                 }
