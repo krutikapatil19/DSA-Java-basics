@@ -1,5 +1,4 @@
 //Binary search only works on Sorted Array
-package Searching;
 
 public class BinarySearch {
     public static int binarySearch(int[] arr , int key){
