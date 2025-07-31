@@ -20,7 +20,7 @@ public static void main(String [] args){
 
     bubbleSort(arr);                                            //calling the method 
     
-for(int num : arr){                                             //print sorted array 
+for(int num : arr){                                     //print sorted array 
     System.out.print(num + " " );
 }
 }
