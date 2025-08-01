@@ -5,7 +5,7 @@ public class MergeSort {
 
         //Compare and store in temp
         while (i <= mid && j <= end) {                                      //we pick the smaller number from both halves and put it into the temp.
-            temp[k++] = (arr[i] <= arr[j] ? arr[i++] : arr[j++]);
+            temp[k++] = (arr[i] <= arr[j] ? arr[i++] : arr[j++]);           //Compare the two numbers , arr[i] and arr[j] , Pick the smaller one , Put it in temp ,  Move to the next number. //k is for the next empty slot.
         }
 
         //copy remaining elements
