@@ -8,7 +8,7 @@ public class PowerOfNumber {
             return 1;
         }
         //Recursive Case: x * (x^(n-1))
-        return x * power(x, n-1);                          //multiply once , and let recursion do the rest.
+        return x * power(x, n-1);                          //multiply once , and let recursion do the rest.   //keep multiplying until the power becomes 0.
     }
     public static void main(String[] agrs){
         int x = 2 , n = 4 ;
