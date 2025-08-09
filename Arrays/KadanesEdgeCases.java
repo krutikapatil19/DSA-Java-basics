@@ -52,6 +52,7 @@ public class KadanesEdgeCases {
                 index = i;
             }
         }
+    
 
         System.out.println("The array contains all Negative elements");      //we print 2 things: array contains allNegative elements , Maxsubarray sum 
         System.out.println("Maximum Subarray sum is :" + max);
