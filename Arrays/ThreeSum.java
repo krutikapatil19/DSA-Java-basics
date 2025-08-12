@@ -19,9 +19,9 @@ public class ThreeSum {
                     
                     left++;                                                            //if we found a valid triplet , then we move left and right inward , i.e left++ and right --
                     right--;
-                } else if (sum < 0) {                                                  //if the sum is lesser than 0 , then we need bigger elements , so we do left++ , as the array is sorted .
+                } else if (sum < 0){                                                  //if the sum is lesser than 0 , then we need bigger elements , so we do left++ , as the array is sorted .
                     left++;
-                } else {                                                               //if the sum is greater than 0 , then we do right-- , as we want a smaller element .
+                } else{                                                               //if the sum is greater than 0 , then we do right-- , as we want a smaller element .
                     right--;
                 }
             }
