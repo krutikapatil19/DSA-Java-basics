@@ -20,7 +20,7 @@ public class LongestPalindrome {
             left --;
             right++;
         }
-        return right - left - 1;                    //length of palindrome
+        return right - left - 1;                    //length of the palindrome
     }
     public static void main(String[] args) {
         LongestPalindrome lp = new LongestPalindrome();
