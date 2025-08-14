@@ -12,15 +12,15 @@ public class ReverseLinkedList {
     static void printList(Node head) {                                  //static is used , so that we can call it directly from main , without maiking an object.  //printList(Node head) = when we give the first node , it will print it.
         for (Node temp = head; temp != null; temp = temp.next)
         System.out.print(temp.val + " -> ");
-        System.out.println("null");
+        System.out.println("null");                                   //shows the end of the chain.
     }
 
-    //Insert at end
-    static Node insertEnd(Node head, int val) {
-        if (head == null) return new Node(val);
-        Node temp = head;
-        while (temp .next != null) temp = temp.next;
-        temp.next = new Node(val);
+    
+    static Node insertEnd(Node head, int val) {                         //add a new node with val , at the end of the list.
+        if (head == null) return new Node(val);                         //if list is empty , the new node becomes the head.
+        Node temp = head;                                               //starts from the head node 
+        while (temp .next != null) temp = temp.next;                    //move forward , until you reach the last node(the one whose next is null).
+        temp.next = new Node(val);                                      //attach the new node at the end 
         return head;
     }
 
