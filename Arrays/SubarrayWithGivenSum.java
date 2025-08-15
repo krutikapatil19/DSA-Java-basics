@@ -14,7 +14,7 @@ public class SubarrayWithGivenSum {
                 currSum -=arr[start];                   //subtract the element at start and move window forward
                 start++;
             }
-            if(currSum==target){                        //if current sum matches the target , print  theindices of the array 
+            if(currSum==target){                        //if current sum matches target , print  theindices of the array 
                 System.out.println("Subarray found from index " + start  + " to " + end);
                 return;
             }
