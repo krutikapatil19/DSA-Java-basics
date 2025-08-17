@@ -1,9 +1,7 @@
-package LinkedList;
-
 class Node{                                                             //we defined what a node in a linked list looks like 
     int val;                                                            //the number/value stored in the box.
     Node next;                                                          //A pointer to the next box. If there's no box , then its null.
-    Node(int val) {this.val = val;}                                     //Constructore , when a new node is created , it saves the value .
+    Node(int val) {this.val = val;}                                     //Constructor , when a new node is created , it saves the value .
 }
 
 public class ReverseLinkedList {
