@@ -1,7 +1,7 @@
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode (int val) {this.val = val;}
+class ListNode {                                                //node class to create linked list nodes
+    int val;                                                    //value stored in the node
+    ListNode next;                                              //pointer to the next node
+    ListNode (int val) {this.val = val;}                        //constructor , when a new node is created , it stores the value
 }
 
 public class MiddleOfLinkedList {
