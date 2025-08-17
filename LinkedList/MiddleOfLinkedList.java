@@ -5,9 +5,11 @@ class ListNode {                                                //node class to 
 }
 
 public class MiddleOfLinkedList {
-    public static ListNode middleNode (ListNode head ){
+    //function to find middle of Linked List 
+    public static ListNode middleNode (ListNode head ){         //static is used , so that we can directly call it from main , without making an object.
         ListNode slow = head, fast = head;
 
+        //while fast is not null
         while(fast != null && fast.next!= null ) {
             slow = slow.next;                                   //move one step
             fast = fast.next.next;                              //move 2 steps
@@ -18,9 +20,9 @@ public class MiddleOfLinkedList {
     //Function to insert a new node at the end 
     public static ListNode insertEnd(ListNode head, int val) {
         ListNode newNode = new ListNode(val);
-        if(head == null) return newNode;
-        ListNode temp = head;
-        while(temp.next != null) {
+        if(head == null) return newNode;                    
+        ListNode temp = head;                                       
+        while(temp.next != null) {                                          
             temp = temp.next;
         }
         temp.next = newNode;
