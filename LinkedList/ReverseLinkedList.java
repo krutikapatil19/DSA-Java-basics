@@ -18,7 +18,7 @@ public class ReverseLinkedList {
         if (head == null) return new Node(val);                         //if list is empty , the new node becomes the head.
         Node temp = head;                                               //starts from the head node 
         while (temp .next != null) temp = temp.next;                    //move forward , until you reach the last node(the one whose next is null).
-        temp.next = new Node(val);                                      //attach the new node at the end 
+        temp.next = new Node(val);                                      //attaches the new node at the end 
         return head;
     }
 
