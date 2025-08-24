@@ -1,7 +1,7 @@
 //Node class
 class Node {
-    int data;                               //value stored in the node
-    Node next;                              //reference to the next node
+    int data;                               //value of the node
+    Node next;                              //reference to the next node in the list
 
     Node(int data) {
         this.data = data;                   //we are assigning some data to the current node or this node
@@ -32,10 +32,10 @@ public class LinkedListBasics {
 
     //Print LinkedList
     public void display() {
-        Node temp = head;                  
-        while(temp != null) {
+        Node temp = head;                  //we assign head to temp , for traversal from head to tail
+        while(temp != null) {              //traverse until temp is not null
             System.out.print(temp.data + " -> ");
-            temp = temp.next;
+            temp = temp.next;              //after printng the current node data , the next node gets assigned to temp
         }
         System.out.println("null");
     }
