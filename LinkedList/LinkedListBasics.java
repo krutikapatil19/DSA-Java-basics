@@ -4,7 +4,7 @@ class Node {
     Node next;                              //reference to the next node in the list
 
     Node(int data) {
-        this.data = data;                   //we are assigning some data to the current node or this node
+        this.data = data;                   //assign data to the current node
         this.next = null;                   //assume there is no next node , means when we create new node , then the value gets assigned 
     }
 }
@@ -15,15 +15,15 @@ public class LinkedListBasics {
 
     //Insert at end
     public void insert(int data) {
-        Node newNode = new Node(data);      //makes a new node
+        Node newNode = new Node(data);      //create a new node
 
-        if (head == null) {                 //if the list is empty , then we assign the new node as head
+        if (head == null) {                 //if the list is empty , new node becomes head
             head = newNode;                 
             return;
         }
 
-        Node temp = head;                   //if linkedlist is not empty , then we move here
-        while (temp.next != null) {         //move till the last , move until the next node we get as null
+        Node temp = head;                   //if linkedlist is not empty , start from head 
+        while (temp.next != null) {         //traverse till end, the next node we get as null
             temp = temp.next;
         }
         temp.next = newNode;                //for inserting new node at the last , we first find the last node (we find it by checking if the next node is null) , then we assign the new node to next
@@ -35,7 +35,7 @@ public class LinkedListBasics {
         Node temp = head;                  //we assign head to temp , for traversal from head to tail
         while(temp != null) {              //traverse until temp is not null
             System.out.print(temp.data + " -> ");
-            temp = temp.next;              //after printng the current node data , the next node gets assigned to temp
+            temp = temp.next;              //after printng the current node data , move temp to the next node
         }
         System.out.println("null");
     }
