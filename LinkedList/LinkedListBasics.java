@@ -1,51 +1,52 @@
-// Node class
+//Node class
 class Node {
-    int data;
-    Node next;
+    int data;                               //value stored in the node
+    Node next;                              //reference to the next node
 
     Node(int data) {
-        this.data = data;
-        this.next = null;
+        this.data = data;                   //we are assigning some data to the current node or this node
+        this.next = null;                   //assume there is no next node , means when we create new node , then the value gets assigned 
     }
 }
 
-// LinkedList class
+//Linked List class
 public class LinkedListBasics {
     Node head;
 
-    // Insert at end
+    //Insert at end
     public void insert(int data) {
-        Node newNode = new Node(data);
+        Node newNode = new Node(data);      //makes a new node
 
-        if (head == null) {   // if list is empty
-            head = newNode;
+        if (head == null) {                 //if the list is empty , then we assign the new node as head
+            head = newNode;                 
             return;
         }
 
-        Node temp = head;
-        while (temp.next != null) {  // move till last
+        Node temp = head;                   //if linkedlist is not empty , then we move here
+        while (temp.next != null) {         //move till the last , move until the next node we get as null
             temp = temp.next;
         }
-        temp.next = newNode;
+        temp.next = newNode;                //for inserting new node at the last , we first find the last node (we find it by checking if the next node is null) , then we assign the new node to next
     }
 
-    // Print Linked List
+
+    //Print LinkedList
     public void display() {
-        Node temp = head;
-        while (temp != null) {
+        Node temp = head;                  
+        while(temp != null) {
             System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
         System.out.println("null");
     }
 
-    // Main function
+    //Main function
     public static void main(String[] args) {
         LinkedListBasics list = new LinkedListBasics();
         list.insert(10);
         list.insert(20);
         list.insert(30);
 
-        list.display();  // Output: 10 -> 20 -> 30 -> null
+        list.display();
     }
 }
