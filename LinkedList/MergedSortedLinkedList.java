@@ -1,22 +1,24 @@
 class Node{
-    int val;
-    Node next;
-    Node (int val) {this.val = val;}
+    int val;                                    //value stored in the node
+    Node next;                                  //reference to the next node
+    Node (int val){                             //constructor to create a node
+    this.val = val;
+    }
 }
 
-public class MergedSortedLinkedList {
+public class MergedSortedLinkedList {           
 
     //Function to merge two sorted lists
     public static Node mergeTwoLists(Node list1 , Node list2) {
-    Node dummy = new Node(-1);
-    Node tail = dummy;
+    Node dummy = new Node(-1);                  //dummy node as a helper , not part of final list
+    Node tail = dummy;                          //tail keeps track of the last node in the merged list
 
-    //comparing while both lists exist 
+    //compare nodes while both lists are not empty
     while (list1 != null && list2 != null){
-        if(list1.val <= list2.val){
+        if(list1.val <= list2.val){             //pick smaller value from list1
         tail.next = list1;
         list1 = list1.next;                     //move list1 forward
-    } else {
+    } else {                                    //else , pick from list2
         tail.next = list2;
         list2= list2.next;                      //move list2 forward
     }
@@ -72,7 +74,7 @@ public static void main(String[] args){
    printList(list2);
 
    //Merge them
-   Node merged = mergeTwoLists(list1, list2);
+   Node merged = mergeTwoLists(list1, list2);                       //made the method mergeTwoLists static , so directly called it without creating an object
 
    System.out.print("Merged List: ");
    printList(merged);
