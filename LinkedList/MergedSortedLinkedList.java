@@ -25,7 +25,7 @@ public class MergedSortedLinkedList {
     tail = tail.next;                           //move tail forward
     }
 
-    //Attach the leftover list
+    //Attach whichever list is still remaining
     if (list1 != null)tail.next = list1;
     if (list2 != null)tail.next = list2;
     return dummy.next;
