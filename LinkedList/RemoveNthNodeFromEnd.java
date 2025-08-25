@@ -1,7 +1,7 @@
 class Node{
-    int val;
-    Node next;
-    Node (int val){
+    int val;                                            //value stored in the node
+    Node next;                                          //referece to the next node
+    Node (int val){                                     //constructor to create a new node
         this.val = val;
         this.next = null;
     }
@@ -10,10 +10,11 @@ class Node{
 
     //Function to remove nth node from end
     public static Node removeNth(Node head, int n) {
-        Node dummy = new Node(-1);
+        Node dummy = new Node(-1);                      //dummy node as a helper node , to point at the head, if head node is to be deleted
         dummy.next = head;
+        
 
-        Node fast = dummy;
+        Node fast = dummy;                              //used two pointers fast and slow , the fastpointer moves n+1 times ahead of the slow pointer
         Node slow = dummy;
 
         /* another approach , by using the length of the linked list , and doing n-1 , to remove that exact node from list
