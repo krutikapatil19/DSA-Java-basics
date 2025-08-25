@@ -28,7 +28,7 @@ public class MergedSortedLinkedList {
     //Attach whichever list is still remaining
     if (list1 != null)tail.next = list1;
     if (list2 != null)tail.next = list2;
-    return dummy.next;
+    return dummy.next;                          //dummy was a fake node at the start(-1) , so the actual merged list starts from dummy.next
 }
 
 //Helper function to insert at end
