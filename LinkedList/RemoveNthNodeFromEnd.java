@@ -44,7 +44,7 @@ class Node{
         return dummy.next;
     }
 
-    //Helper funciton to insert at end 
+    //Helper function to insert at end 
     public static Node insertEnd(Node head, int val) {
         Node newNode = new Node(val);
         if (head == null) return newNode;
