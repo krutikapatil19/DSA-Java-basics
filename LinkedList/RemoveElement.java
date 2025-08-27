@@ -1,6 +1,7 @@
+//Node structure
 class ListNode {
-    int val;
-    ListNode next;
+    int val;                                                //value of the node     
+    ListNode next;                                          //reference to the next node
 
     ListNode (int val) {
         this.val = val;
@@ -9,24 +10,24 @@ class ListNode {
 }
 
 public class RemoveElement {
-    //fucntion to remove the target element
+    //fucntion to remove all nodes with value = target
     public static ListNode removeElements (ListNode head, int target) {
-        //Create dummy node before head
+        
+        //Create dummy node that points to head
+        //helps when head itself needs to be deleted
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
 
-        ListNode current = dummy;
+        ListNode current = dummy;                  
 
-        //Traverse list
-        while(current.next != null) {
-            if(current.next.val == target) {
-                //Skip the node
+        while(current.next != null) {                       //traverse till the end of list
+            if(current.next.val == target) {                //if current node has the target value -> skip it
                 current.next = current.next.next;
             } else {
-                current = current.next;
+                current = current.next;                     //else just move ahead
             }
         }
-        return dummy.next;                                  //new head
+        return dummy.next;                                  //return the new head
     }
 
     public static void main(String[] args) {
@@ -34,12 +35,13 @@ public class RemoveElement {
         head.next = new ListNode(2);
         head.next.next = new ListNode(6);
         head.next.next.next = new ListNode (4);
+        head.next.next.next.next = new ListNode(6);
 
 
         int target = 6;
 
-        //Remove target elements
-        ListNode result = removeElements(head, target);
+        //calling function 
+        ListNode result = removeElements(head, target);     //Remove target elements
 
         //Print updated list
         while(result!= null){
