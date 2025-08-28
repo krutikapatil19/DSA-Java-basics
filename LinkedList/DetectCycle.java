@@ -1,21 +1,23 @@
 class Node {
-int val;
-Node next;
+int val;                                            //value inside the node
+Node next;                                          //reference to the next node
 Node(int val) {
-    this.val = val;
-    this.next = null;
+    this.val = val;                                 //put value in the node
+    this.next = null;                               
     }
 }
 
 public class DetectCycle {
+    //Function to check if cycle is present
     public static boolean hasCycle(Node head) {
-        Node slow = head, fast = head;
-        while(fast!= null && fast.next!= null){
-            slow = slow.next;
-            fast = fast.next.next;
-            if(slow == fast) return true;
+        Node slow = head,                           //slow pointer -> moves 1 step
+        fast = head;                                //fast pointer -> moves 2 steps
+        while(fast!= null && fast.next!= null){     //keep moving till fast reaches end
+            slow = slow.next;                       //move slow 1 step
+            fast = fast.next.next;                  //move fast 2 steps
+            if(slow == fast) return true;           //if both meet -> cycle
         }
-        return false;
+        return false;                               //if fast reaches null -> no cycle
     }
     
 public static void main(String[] args){
@@ -26,7 +28,7 @@ public static void main(String[] args){
     Node n4 = new Node(20);
     Node n5 = new Node(12);
 
-
+    //connecting the nodes : 1 -> 2 -> 3 -> 4 -> 5
     n1.next = n2;
     n2.next = n3;
     n3.next = n4;
