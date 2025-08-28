@@ -16,8 +16,8 @@ public class PasswordValidator {
         }
 
         //Variables to check conditions
-        boolean hasaDigit = false;          //to check if digit is present
-        boolean hasCapital = false;         //to check if capital letter is present
+        boolean hasDigit = false;          //to check if digit is present
+        boolean hasUpper = false;         //to check if capital letter is present
 
         //3.Loop through each character of the password
         for(int i =0; i<n; i++) {
@@ -38,7 +38,7 @@ public class PasswordValidator {
             }
         }
         //4.After loop, check if digit and capital letter werefound
-        if(hasDigit && hasCapital) {
+        if(hasDigit && hasUpper) {
             return 1;                               //valid password
         }
 
@@ -50,7 +50,7 @@ public class PasswordValidator {
         String password = sc.nextLine();            //read full password
         sc.close();
 
-        int result = checkPassword(password, password.length());
+        int result = CheckPassword(password, password.length());
         if (result == 1)
             System.out.println("Password is valid!");
         else 
