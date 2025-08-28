@@ -1,9 +1,9 @@
 //Node class
 class Node {
-    int data;
-    Node next;
+    int val;                                                           //value of the node            
+    Node next;                                                         //refernce to next node
     Node(int data) {
-        this.data = data;
+        this.val = data;    
         this.next = null;
     }
 }
@@ -12,43 +12,40 @@ public class PalindromeLinkedList {
 
     //Function to check if linked list is palindrome
     public static boolean isPalindrome(Node head) {
-        if(head == null || head.next == null) return true;
+        if(head == null || head.next == null) return true;              //if there 0 or 1 node, its always palindrome
 
-        //Find middle
+        //Find middle of list using fast and slow pointers
         Node slow = head;
         Node fast = head;
         while(fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+            slow = slow.next;                                           //move slow by 1
+            fast = fast.next.next;                                      //move fast by 2
         }
+        //now slow is at middle of list 
 
-        Node secondHalf = reverse(slow);
-
-        //Comparing both halves
-        Node firstHalf = head;
-        while(secondHalf != null) {
-            if(firstHalf.data != secondHalf.data) {
-                return false;                                  //when both halves mismatch , linkedlist is not palindrome.
-            }
-            firstHalf = firstHalf.next;
-            secondHalf = secondHalf.next;
-        }
-        return true;                                           //all matched
-    }
-
-    //Helper function to reverse linked list 
-    private static Node reverse(Node head) {
-        Node prev = null, curr = head, next;
+        //Reverse second half of list
+        Node prev = null;
+        Node curr = slow;
         while(curr != null) {
-            next = curr.next;
+            Node nextNode = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = next;
+            curr = nextNode;
         }
-        return prev;
+        //now prev = head of reversed 2nd half
+
+        //Comparing both halves (first half and reversed second half)
+        Node first = head;
+        Node second = prev;
+        while(second != null) {
+            if(first.val != second.val) return false;                   //is values not same -> not a palindrome
+               first = first.next;
+               second = second.next;                                
+            }
+            return true;                                                //if all values matched -> palindrome
+                                                
     }
-    //Main to test
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         Node head = new Node(1);
         head.next = new Node(2);
         head.next.next = new Node(2);
