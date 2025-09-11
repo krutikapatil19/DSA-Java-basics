@@ -19,7 +19,7 @@ boolean isPalindrome(String s) {
 }
 ```
 
-#### 2.Same Direction: 
+### 2.Same Direction: 
 Both pointers start from the beginning, but move at different speeds (slow & fast).
 Example: detecting cycle in a linked list.
 
@@ -33,6 +33,7 @@ Example: detecting cycle in a linked list.
 
 #### Conclusion: 
 Two pointer technique optimizes problems involving arrays or strings by using two indices that move towards each other or in the same direction. It reduces time complexity from O(n²) to O(n) in many cases.
+
 
 
 
