@@ -9,8 +9,9 @@ Instead of recalculating for every window , we use previous results by adding th
 ## Two types of Sliding Window 
 
 ### 1. Fixed Sized Window
-In this window length is fixed. Ex: Finding the maximum sum of any 3 consecutive days sales. You dont recalculate all 3 each time , you just drop the old day and add the new day.
+In this window length is fixed. 
+-Ex: Finding the maximum sum of any 3 consecutive days sales. You dont recalculate all 3 each time , you just drop the old day and add the new day.
 
 ### 2 . Variable-size window 
 In this, window expands or shrinks depending on conditions.
-Ex: Finding the smallest substring that contains all characters of another string. You grow/shrink the window until the condition is satisfied.
+-Ex: Finding the smallest substring that contains all characters of another string. You grow/shrink the window until the condition is satisfied.
