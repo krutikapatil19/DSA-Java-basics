@@ -23,21 +23,21 @@ Its mostly used in LinkedLists (and sometimes arrays) to solve problems like fin
 ##  Example 1: Detect Cycle in Linked List
 
 ```java
-class ListNode {
+class Node {
     int val;
-    ListNode next;
-    ListNode(int x) {
+    Node next;
+    Node(int x) {
         val = x;
         next = null;
     }
 }
 
 public class CycleCheck {
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle(Node head) {
         if (head == null || head.next == null) return false;
 
-        ListNode slow = head;   
-        ListNode fast = head;   
+        Node slow = head;   
+        Node fast = head;   
 
         while (fast != null && fast.next != null) {
             slow = slow.next;          // 1 step
