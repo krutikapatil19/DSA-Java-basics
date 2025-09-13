@@ -2,7 +2,7 @@
 
 Its mostly used in LinkedLists (and sometimes arrays) to solve problems like finding a cycle , finding the middle of a list, or detecting repetition.
 
-# Fast & Slow Pointer (Floyd’s Cycle Detection)
+## Fast & Slow Pointer (Floyd’s Cycle Detection)
 - This technique is used to solve problems where two pointers move at **different speeds** through a data structure.
 
 - **Slow Pointer** → moves **1 step** at a time  
