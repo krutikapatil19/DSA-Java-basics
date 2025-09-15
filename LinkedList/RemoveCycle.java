@@ -69,7 +69,7 @@ public class RemoveCycle {
             //Call removeCycle
             RemoveCycle.removeCycle(head);
 
-            //print list to check cycle removal
+            //print the list to check cycle removal
             ListNode temp = head;
             while (temp != null) {
                 System.out.print(temp.val + " ");
