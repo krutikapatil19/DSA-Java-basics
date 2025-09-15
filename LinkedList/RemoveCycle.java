@@ -8,69 +8,73 @@ class ListNode {
 }
 
 public class RemoveCycle {
-    
-    // Function to detect and remove cycle
+
+    //Function to detect and remove cycle 
     public static void removeCycle(ListNode head) {
         if (head == null || head.next == null) return;
 
-        ListNode slow = head, fast = head;
+        ListNode slow = head, fast =head;
 
-        // Step 1: Detect cycle
+        //Step1: detect cycle using Floyd's Algorithm
         boolean hasCycle = false;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;           // move 1 step
-            fast = fast.next.next;      // move 2 steps
+        while(fast!= null && fast.next != null) {
+            slow = slow.next;                           //move 1 step
+            fast = fast.next.next;                      //move 2 steps
 
-            if (slow == fast) {         // cycle detected
-                hasCycle = true;
+            if (slow == fast) {
+                hasCycle = true;                        //cycle detected , as both slow and fast pointer meets
                 break;
             }
         }
 
-        if (!hasCycle) return; // No cycle → nothing to remove
+        if(!hasCycle) return;                           //no cycle -> nothing to remove 
 
-        // Step 2: Find start of cycle
-        slow = head;
+    
+        //Step 2: Find the start of cycle 
+
+        slow = head;                                    //put one pointer at head node
         while (slow != fast) {
             slow = slow.next;
             fast = fast.next;
         }
-        // Now slow (or fast) is at the start of the cycle
+    
 
-        // Step 3: Find the last node of cycle and break it
-        ListNode temp = slow;
-        while (temp.next != slow) {
+        //now slow (or fast) is at the START of the cycle -how i have doubt 
+
+        //Step3 : Find the node just before the start of the cycle - so it can be pointed to null , to end the cycle. 
+
+        //Traversing only the cycle
+        ListNode temp = slow;                            //slow is at the start of cycle.
+        while (temp.next != slow) {                      //move till the node , whose next is cycle start(slow) , it basically means when the cycle is traversed again from the starting point of cyle , so we get to know the last node , whose .next can be finally be set to null
             temp = temp.next;
         }
-        temp.next = null; // breaks the cycle
-    }
 
-    // Helper function to print the linked list
-    public static void printList(ListNode head) {
-        ListNode temp = head;
-        while (temp != null) {
-            System.out.print(temp.val + " -> ");
-            temp = temp.next;
+        //Step 4 : Break the Cycle
+        temp.next = null;
         }
-        System.out.println("null");
+    
+    
+        public static void main(String[] args) {
+
+            //Create linked list
+            ListNode head = new ListNode(1);
+            head.next= new ListNode(2);
+            head.next.next = new ListNode(3);
+            head.next.next.next = new ListNode(4);
+            head.next.next.next.next = new ListNode(5);
+
+            //Create a cycle (5 -> 3)
+            head.next.next.next.next.next = head.next.next;
+
+            //Call removeCycle
+            RemoveCycle.removeCycle(head);
+
+            //print list to check cycle removal
+            ListNode temp = head;
+            while (temp != null) {
+                System.out.print(temp.val + " ");
+                temp = temp.next;
+            }
+        }
     }
 
-    public static void main(String[] args) {
-        // Create a linked list
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-
-        // Create a cycle: connect 5 -> 3
-        head.next.next.next.next.next = head.next.next;
-
-        // Detect & remove cycle
-        removeCycle(head);
-
-        // Print list after removing cycle
-        System.out.println("Linked List after removing cycle:");
-        printList(head);
-    }
-}
