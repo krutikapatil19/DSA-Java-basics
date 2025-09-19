@@ -10,10 +10,10 @@ public class reverseString{
 public static void main(String[] args){
     reverseString obj = new reverseString();                        //create object to call the method
 
-    String input = "I love solving string questions";               //input string
-    String result = obj.reverse(input);                             //call the method and store result 
+    String str = "I love solving string questions";               //input string
+    String result = obj.reverse(str);                             //call the method and store result 
 
-    System.out.println("Original String :" + input);
+    System.out.println("Original String :" + str);
     System.out.println("Reversed String: " + result);
 }
 }
