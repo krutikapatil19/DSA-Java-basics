@@ -18,3 +18,4 @@ public class RemoveSpaces {
     }
 }
 
+//str.replace(" ", "") - this is also a method by which we can replace every space with an empty string.
