@@ -20,7 +20,7 @@ public class AnagramCheck{
     }
     public static void main(String[] args){
         String str1 = "silent";
-        String str2 = "listen";
+        String str2 = "listens";
 
         if(isAnagram(str1, str2)) {
            System.out.println("Strings are anagram"); 
