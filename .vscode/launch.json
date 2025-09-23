@@ -1,0 +1,498 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AddNodeInFront",
+            "request": "launch",
+            "mainClass": "AddNodeInFront",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "AnagramCheck",
+            "request": "launch",
+            "mainClass": "AnagramCheck",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "BinarySearch",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "BubbleSort",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "BuyAndSellStock",
+            "request": "launch",
+            "mainClass": "BuyAndSellStock",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "CharacterFrequency",
+            "request": "launch",
+            "mainClass": "CharacterFrequency",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "CheckSortedArray",
+            "request": "launch",
+            "mainClass": "CheckSortedArray",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "CountFrequency",
+            "request": "launch",
+            "mainClass": "CountFrequency",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "CountNearbyElements",
+            "request": "launch",
+            "mainClass": "CountNearbyElements",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "ElementsOccuringMoreThanNTimes",
+            "request": "launch",
+            "mainClass": "ElementsOccuringMoreThanNTimes",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "FindMissingNumber",
+            "request": "launch",
+            "mainClass": "FindMissingNumber",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "FirstAndLastOccurence",
+            "request": "launch",
+            "mainClass": "FirstAndLastOccurence",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "FirstNonRepeatingCharacter",
+            "request": "launch",
+            "mainClass": "FirstNonRepeatingCharacter",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "FirstRepeatingElements",
+            "request": "launch",
+            "mainClass": "FirstRepeatingElements",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "FrequencyOfElements",
+            "request": "launch",
+            "mainClass": "FrequencyOfElements",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "HarmoniousSegments",
+            "request": "launch",
+            "mainClass": "HarmoniousSegments",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "InsertionSort",
+            "request": "launch",
+            "mainClass": "InsertionSort",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "IntersectionOfTwoArrays",
+            "request": "launch",
+            "mainClass": "IntersectionOfTwoArrays",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "IntersectionPoints",
+            "request": "launch",
+            "mainClass": "IntersectionPoints",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "KadanesEdgeCases",
+            "request": "launch",
+            "mainClass": "KadanesEdgeCases",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "LeaderElements",
+            "request": "launch",
+            "mainClass": "LeaderElements",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "LeftRotateByD",
+            "request": "launch",
+            "mainClass": "LeftRotateByD",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "LinearSearch",
+            "request": "launch",
+            "mainClass": "LinearSearch",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "LongestCommonPrefix",
+            "request": "launch",
+            "mainClass": "LongestCommonPrefix",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "LongestPalindrome",
+            "request": "launch",
+            "mainClass": "LongestPalindrome",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MaxAndMin",
+            "request": "launch",
+            "mainClass": "MaxAndMin",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MaxSubarraySum",
+            "request": "launch",
+            "mainClass": "MaxSubarraySum",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MaximumFrequencyCharacter",
+            "request": "launch",
+            "mainClass": "MaximumFrequencyCharacter",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MergeSort",
+            "request": "launch",
+            "mainClass": "MergeSort",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MergeSortedArrays",
+            "request": "launch",
+            "mainClass": "MergeSortedArrays",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MissingNumber",
+            "request": "launch",
+            "mainClass": "MissingNumber",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MostFrequentlyOcurringElement",
+            "request": "launch",
+            "mainClass": "MostFrequentlyOcurringElement",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "MoveZeroesToEnd",
+            "request": "launch",
+            "mainClass": "MoveZeroesToEnd",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "PalindromeCheck",
+            "request": "launch",
+            "mainClass": "PalindromeCheck",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "PasswordValidator",
+            "request": "launch",
+            "mainClass": "PasswordValidator",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RatsAndFood",
+            "request": "launch",
+            "mainClass": "RatsAndFood",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "Recursion.Factorial",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "Recursion.Fibonacci",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "PowerofNumber",
+            "request": "launch",
+            "mainClass": "Recursion.PowerofNumber",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "ReverseString",
+            "request": "launch",
+            "mainClass": "Recursion.ReverseString",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "SumOfDigits",
+            "request": "launch",
+            "mainClass": "Recursion.SumOfDigits",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RemoveDuplicateCharacters",
+            "request": "launch",
+            "mainClass": "RemoveDuplicateCharacters",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RemoveDuplicates",
+            "request": "launch",
+            "mainClass": "RemoveDuplicates",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RemoveDuplicatesInPlace",
+            "request": "launch",
+            "mainClass": "RemoveDuplicatesInPlace",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RemoveSpaces",
+            "request": "launch",
+            "mainClass": "RemoveSpaces",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RightAngledTriangle",
+            "request": "launch",
+            "mainClass": "RightAngledTriangle",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RotateArray",
+            "request": "launch",
+            "mainClass": "RotateArray",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RotationCheck",
+            "request": "launch",
+            "mainClass": "RotationCheck",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "RotationOfArray",
+            "request": "launch",
+            "mainClass": "RotationOfArray",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "SearchInRotatedArray",
+            "request": "launch",
+            "mainClass": "SearchInRotatedArray",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "SelectionSort",
+            "request": "launch",
+            "mainClass": "SelectionSort",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "SortedAndRotated",
+            "request": "launch",
+            "mainClass": "SortedAndRotated",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "StackOperations",
+            "request": "launch",
+            "mainClass": "Stack.StackOperations",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "StrStrImplementation",
+            "request": "launch",
+            "mainClass": "StrStrImplementation",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "SubarrayWithGivenSum",
+            "request": "launch",
+            "mainClass": "SubarrayWithGivenSum",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "ThreeSum",
+            "request": "launch",
+            "mainClass": "ThreeSum",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "TimeAndWorkLoop",
+            "request": "launch",
+            "mainClass": "TimeAndWorkLoop",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "ToggleCase",
+            "request": "launch",
+            "mainClass": "ToggleCase",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "TwoSum",
+            "request": "launch",
+            "mainClass": "TwoSum",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "WordCounter",
+            "request": "launch",
+            "mainClass": "WordCounter",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "checkDuplicate",
+            "request": "launch",
+            "mainClass": "checkDuplicate",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "countCharacters",
+            "request": "launch",
+            "mainClass": "countCharacters",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "countOfAnElement",
+            "request": "launch",
+            "mainClass": "countOfAnElement",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "maxNumber",
+            "request": "launch",
+            "mainClass": "maxNumber",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "pyramidPattern",
+            "request": "launch",
+            "mainClass": "pyramidPattern",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "reverse",
+            "request": "launch",
+            "mainClass": "reverse",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "reverseArray",
+            "request": "launch",
+            "mainClass": "reverseArray",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "reverseString",
+            "request": "launch",
+            "mainClass": "reverseString",
+            "projectName": "Javadsa_4be515d"
+        },
+        {
+            "type": "java",
+            "name": "secondLargest",
+            "request": "launch",
+            "mainClass": "secondLargest",
+            "projectName": "Javadsa_4be515d"
+        }
+    ]
+}
