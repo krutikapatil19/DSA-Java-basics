@@ -12,6 +12,7 @@ public class MergeSortedArray {
                 p1--;
             } else {
                 nums1[p] = nums2[p2];               
+                
                 p2--;
             }
             p--;
