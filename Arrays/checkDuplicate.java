@@ -1,27 +1,30 @@
 import java.util.HashSet;
 public class checkDuplicate {
-    public static void main(String[] args){
-
-        int [] arr = {3,7,5,10,20,6};
+    public static boolean hasDuplicates(int[] arr){
 
         HashSet<Integer> set = new HashSet<>();
-        boolean hasDuplicate = false;               //we consider the array hasDuplicate as false , as initially there is no duplicates
 
-        for(int num : arr){                     //number belonging to the array 
-            if (set.contains(num)) {            //to check whether the set contains that number
-                hasDuplicate = true;            //this means the number is duplicate , so it breaks the loop 
-                break;
+        for(int i =0;i<arr.length; i++){
+            if(set.contains(arr[i])) {
+                return true;                            //If the number is already present in the array , it means the array contains duplicates.
             }
-            set.add(num);                       //to add the number if it is unique/ notduplicate
-        }
-
-        if(hasDuplicate){
-            System.out.println("The array contains Duplicates");
-        }else{
-            System.out.println("The array does not contain any duplicates ");
-        }
-
-
+            set.add(arr[i]);                            //to add the number if it's not already present.
     }
+    return false;
+    }
+
+        public static void main(String[] args){
+            int[] arr = {3,7,5,10,20,20,6};
+
+            boolean checkDuplicate = hasDuplicates(arr);
+
+            if(checkDuplicate) {
+                System.out.println("The array contains duplicates.");
+            }else {
+                System.out.println("The array does not contain any duplicates.");
+            }
+        }
+    }
+
     
-}
+    
