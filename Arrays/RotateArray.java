@@ -22,3 +22,5 @@ public class RotateArray{
         }
     }
 }
+
+//Rotation of array using an extra array , temp. This approach is easy to understand , but not optimized version . Rotation using reverse algorithm is a more optimized way to solve the same problem .
