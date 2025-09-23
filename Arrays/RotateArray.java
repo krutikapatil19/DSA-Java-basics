@@ -10,7 +10,7 @@ public class RotateArray{
         
         for(i=0;i<arr.length-1 ;i++){
 
-            arr[i]=arr[i+1];
+            arr[i]=arr[i+1]; 
         }
 
         //putting 1st element to the last index
