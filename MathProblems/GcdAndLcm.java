@@ -8,12 +8,17 @@ public class GcdAndLcm {
         return a;
     }
 
+    public static int findLCM(int a, int b){
+        return(a*b) / findGCD(a,b);
+    }
+
     public static void main(String[] args) {
         int a = 24;
         int b = 48;
 
-        int gcd = findGCD(a, b);
-        int lcm = (a * b) / gcd;
+        //Call methods to get GCD and LCM
+        int gcd = findGCD(a,b);
+        int lcm = findLCM(a,b);
 
         System.out.println("GCD = " + gcd);
         System.out.println("LCM = " + lcm);
