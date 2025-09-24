@@ -1,8 +1,8 @@
 public class DecimalToBinary {
     public static String decimalToBinary(int n) {
-        String binary = " ";
-        while (n > 0) {
-            int remainder = n % 2;
+        String binary = " ";                                //created an empty string , to store the binary digits.
+        while (n != 0) {
+            int remainder = n % 2;                          //get remainder ,  we either get 1 or 0.
             binary = remainder + binary;
             n = n / 2;
         }
