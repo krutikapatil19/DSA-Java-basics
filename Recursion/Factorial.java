@@ -10,7 +10,7 @@ public class Factorial {
         return n* factorial(n-1);
     }
     public static void main(String[] args) {
-        int num = 4;
-        System.out.println("Factorial of " + num   +  " is : " + factorial(num));
+        int n = 4;
+        System.out.println("Factorial of " + n   +  " is : " + factorial(n));
     }
 }

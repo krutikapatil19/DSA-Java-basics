@@ -4,7 +4,7 @@ public class Fibonacci{
         //Base Case
         if(n==0){                                               //if number is 0 , return 0.
             return 0;
-        }else if (n == 1) {                                     //if number is 1 , return 1.
+        }else if (n==1) {                                     //if number is 1 , return 1.
             return 1;
         }else{
             //Recursive case : Sum of previous 2 fibonacci numbers
