@@ -5,9 +5,9 @@ public class permutation {
             System.out.println(str);
         }
         for (int i = left; i<=right; i++){
-            str = swap(str, left, i);                   //swap
-            permute(str, left+1, right);                //recurse
-            str = swap(str,left,i);                     //backtrack
+            str = swap(str, left, i);                   //swap         //It basically swaps the character at left with the character at i.
+            permute(str, left+1, right);                //recurse      //move each possible character to try all possibilities.
+            str = swap(str,left,i);                     //backtrack    //Swap is used to move each character to the first place.
         }
     }
 
