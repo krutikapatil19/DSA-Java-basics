@@ -71,6 +71,56 @@ public class LinkedListBasics {
 
     }
 
+    //Deletion of head node
+    public void deleteStart(){
+    if(head == null){
+        System.out.println("List is empty.");
+    }
+    head = head.next; 
+    }
+
+    //deletion of last node
+    public void deleteTail(int val){
+        if(head == null){
+            System.out.println("The list is empty.");
+            return;
+        }
+        if(head.next == null){              //only one node
+            head = null;
+            return;
+        }
+        Node temp = head;
+        while(temp.next.next != null){     //go till 2nd last node (the node whose next.next is null).
+            temp = temp.next;
+        }
+        temp.next = null;
+    }
+
+    //Delete at given index
+    public void deleteAtIndex(int index){
+        if(head == null){
+            System.out.println("List is empty.");
+            return;
+        }
+        if(index == 0){                 //delete head
+            head = head.next;
+            return;
+        }
+
+        Node temp = head;
+        int count = 0;
+        while(temp != null && count < index-1){
+            temp = temp.next;
+            count++;
+        }
+        if(temp == null || temp.next == null){
+            System.out.println("Index out of range.");
+            return;
+        }
+        temp.next = temp.next.next;
+
+
+    }
 
     //Print LinkedList
     public void display() {
@@ -89,6 +139,9 @@ public class LinkedListBasics {
         list.insertEnd(20);
         list.insertStart(30);
         list.insertAtIndex(2,24);
+
+        list.deleteStart();
+        list.deleteAtIndex(1);
 
         list.display();
     }
