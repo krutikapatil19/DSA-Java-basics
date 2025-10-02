@@ -1,32 +1,74 @@
-//Node class
+//Node class 
 class Node {
-    int data;                               //value of the node
-    Node next;                              //reference to the next node in the list
+    int data;                              //value of the node
+    Node next;                             //reference to the next node in the list
 
     Node(int data) {
-        this.data = data;                   //assign data to the current node
-        this.next = null;                   //assume there is no next node , means when we create new node , then the value gets assigned 
+        this.data = data;                  //assign data to the current node
+        this.next = null;                  //assume there is no next node, means 
     }
 }
 
-//Linked List class
+//LinkedList class 
 public class LinkedListBasics {
     Node head;
 
     //Insert at end
-    public void insert(int data) {
-        Node newNode = new Node(data);      //create a new node
+    public void insertEnd(int data){
+    Node newNode = new Node(data);          //create a new node
 
-        if (head == null) {                 //if the list is empty , new node becomes head
-            head = newNode;                 
+    if(head==null){                         //if the list is empty, new node becomes head.
+        head = newNode;
+        return;
+    }
+    Node temp = head;                       //If LL is not empty, then start from head 
+    while(temp.next != null){               //traverse till end , when temp.next is null.
+        temp = temp.next;
+    }
+    temp.next = newNode;
+}
+
+    //Insert at start 
+    public void insertStart(int data){
+        Node newNode = new Node(data);
+
+        if(head == null){
+            head = newNode;
             return;
         }
-
-        Node temp = head;                   //if linkedlist is not empty , start from head 
-        while (temp.next != null) {         //traverse till end, the next node we get as null
-            temp = temp.next;
+        else {
+            newNode.next = head;
+            head = newNode;
+            //newNode.next
         }
-        temp.next = newNode;                //for inserting new node at the last , we first find the last node (we find it by checking if the next node is null) , then we assign the new node to next
+    }
+
+    //Insert at a given index
+    public void insertAtIndex(int index, int data){
+        Node newNode = new Node(data);
+        if(index == 0){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        
+        Node temp = head;
+        int count = 0;
+        //Traverse until (index-1)th node
+        while(temp != null && count<index-1){
+            temp = temp.next;
+            count++;
+          }
+
+          //If index is out of range
+          if(temp == null){
+            System.out.println("Index out of range");
+            return;
+          }
+          //Insert node
+          newNode.next= temp.next;
+          temp.next = newNode;
+
     }
 
 
@@ -43,9 +85,10 @@ public class LinkedListBasics {
     //Main function
     public static void main(String[] args) {
         LinkedListBasics list = new LinkedListBasics();
-        list.insert(10);
-        list.insert(20);
-        list.insert(30);
+        list.insertStart(10);
+        list.insertEnd(20);
+        list.insertStart(30);
+        list.insertAtIndex(2,24);
 
         list.display();
     }
