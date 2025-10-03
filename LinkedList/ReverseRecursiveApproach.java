@@ -5,7 +5,7 @@ class Node{
         this.val = val;
     }
 }
-public class RecursiveRecursion {
+public class ReverseRecursiveApproach {
     
         Node head;
         Node tail;
@@ -46,7 +46,7 @@ public class RecursiveRecursion {
         }
 
         public static void main(String[] args) {
-            RecursiveRecursion list = new RecursiveRecursion();
+            ReverseRecursiveApproach list = new ReverseRecursiveApproach();
             list.addLast(1);
             list.addLast(5);
             list.addLast(15);
