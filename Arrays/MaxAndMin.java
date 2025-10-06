@@ -1,20 +1,28 @@
 public class MaxAndMin {
-    public static void main(String[] args){
-        int [] arr = {3,6,10,9,45,68,72};
+    public static int MaxVal(int[] arr) {
+        int Max = Integer.MIN_VALUE;
 
-        int max = arr[0];
-        int min = arr[0];
-
-        for(int i = 0; i<arr.length; i++){
-            if(arr[i]>arr[0]){
-                max = arr[i];
-            }
-            if(arr[i]<arr[0]){
-                min = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > Max) {
+                Max = arr[i];
             }
         }
-        System.out.println("The maximum number in the array is :" + max);
-        System.out.println("The minimum number in the array is :" +min);
+        return Max;
     }
-    
+
+    public static int MinVal(int[] arr) {
+        int Min = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < Min) {
+                Min = arr[i];
+            }
+        }
+        return Min;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 12, 10, 14, 20, 250, };
+        System.out.println(
+                "The Maximum value and Minimum value in the array is : " + MaxVal(arr) + " and " + MinVal(arr));
+    }
 }
