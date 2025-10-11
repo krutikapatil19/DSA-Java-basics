@@ -1,26 +1,21 @@
 public class MoveZeroesToEnd {
-
-   public static void movingZeroesToEnd(int[] arr){
-      int index = 0 ;
-
-      for(int i =0; i<arr.length; i++){
-         if(arr[i]!=0){
-            arr[index++] = arr[i];                    //Move non-zero numbers forward.
-         }
-      }
-      //Fill the rest with zeroes
-      while(index<arr.length) {
-         arr[index++] =0;
-      }
-   }
-      public static void main(String[] args){
-         int[] arr = {3,8,0,5,18,0,9};
-         movingZeroesToEnd(arr);
-         System.out.println("Array after moving zeroes to the end : ");
-
-         for(int i =0;i<arr.length;i++){
-            System.out.print(arr[i] + " ");
-
+   public static void movingZeroesToEnd(int[] arr) {
+      int j = 0; // position where the next non-zero element should go.
+      for (int i = 0; i < arr.length; i++) {
+         if (arr[i] != 0) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j++;
          }
       }
    }
+
+   public static void main(String[] args) {
+      int[] arr = { 0, 3, 10, 0, 5, 0, 2 };
+      movingZeroesToEnd(arr);
+      for (int num : arr) {
+         System.out.print(num + " ");
+      }
+   }
+}
