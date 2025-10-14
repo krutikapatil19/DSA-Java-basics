@@ -1,6 +1,6 @@
 public class MoveZeroesToEnd {
    public static void movingZeroesToEnd(int[] arr) {
-      int j = 0; // position where the next non-zero element should go.
+      int j = 0;
       for (int i = 0; i < arr.length; i++) {
          if (arr[i] != 0) {
             int temp = arr[i];
