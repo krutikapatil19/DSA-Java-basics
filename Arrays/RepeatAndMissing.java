@@ -15,13 +15,13 @@ public class RepeatAndMissing {
       }
 
       //Calculating the difference between actual and expected sums
-      long X = sumArr - sumN;                      //A-B
+      long X = sumArr - sumN;                      //A-B //imp formula
       long Y = sumSqArr - sumSqN;                  //A² - B²
-      long AplusB = Y/X;                           //Simplify A² - B² = (A+B)(A-B)
+      long AplusB = Y/X;                           //Simplify A² - B² = (A+B)(A-B) //imp formula 
 
       //Solve two simple equations , to get A and B 
-      long repeated = (X+AplusB)/2;
-      long missing = repeated - X;
+      long repeated = (X+AplusB)/2;                //A = (X + (Y/X)) / 2
+      long missing = repeated - X;                 //B = A - X
 
       //Return the result
       return new int[]{(int) repeated , (int) missing};
