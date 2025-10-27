@@ -12,7 +12,7 @@ public class ContainerWithMostWater {
                 maxArea = currentArea;
             }
 
-            //Move the pointer pointing to the shorter line inward
+            //Moving the pointer pointing to the shorter line inward
             if (height[left] < height[right]) {
                 left++;
             }else {
