@@ -9,6 +9,7 @@ public class RepeatAndMissing {
       //Calculate what the array actually gives
       long sumArr = 0, sumSqArr = 0;
 
+      //Find actual Sums and SumOfSquares
       for(int num: arr){
          sumArr += num;                            //total of elements
          sumSqArr += (long) num * num;             //sum of squares
