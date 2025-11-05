@@ -5,18 +5,25 @@ public class TrappingRainWater {
         int left = 0, right = height.length - 1;
         int totalWater = 0; // keeps track of total water trapped
 
+        // Move two pointers toward each other
         while (left < right) {
+            // Decide which side to process(the shorter one limits water)
+
             if (height[left] <= height[right]) {
+                // If left bar is lower than leftMax, water can be trapped
                 if (leftMax > height[left]) {
                     totalWater += leftMax - height[left];
                 } else {
+                    // Update leftMax when higher bar is found
                     leftMax = height[left];
                 }
                 left++;
             } else {
+                // If right bar is lower than rightMax , water can be trapped
                 if (rightMax > height[right]) {
                     totalWater += rightMax - height[right];
                 } else {
+                    // update rightMax when higher bar is found
                     rightMax = height[right];
                 }
                 right--;
