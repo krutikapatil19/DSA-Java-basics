@@ -1,5 +1,5 @@
 public class TrappingRainWater {
-    public static int FindTotalWater(int[] height) {
+    public static int findTotalWater(int[] height) {
         int leftMax = 0, rightMax = 0; // Inititalizing leftMax and rightMax to keep a track of Max height of bar seen
                                        // so far at the left and right
         int left = 0, right = height.length - 1;
@@ -34,6 +34,11 @@ public class TrappingRainWater {
 
     public static void main(String[] args) {
         int[] height = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
-        System.out.println(FindTotalWater(height));
+        System.out.println(findTotalWater(height));
     }
 }
+
+/*
+Time complexity: O(n) — each index is processed once
+Space complexity: O(1) — constant extra space
+*/
