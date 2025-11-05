@@ -1,30 +1,32 @@
 public class TrappingRainWater {
-    public int trap(int[] height) {
+    public static int FindTotalWater(int[] height) {
+        int leftMax = 0, rightMax = 0; // Inititalizing leftMax and rightMax to keep a track of Max height of bar seen
+                                       // so far at the left and right
         int left = 0, right = height.length - 1;
-        int leftMax = 0, rightMax = 0;
-        int water = 0;
+        int totalWater = 0; // keeps track of total water trapped
 
-        while(left<right) {
-            if(height[left] < height[right]) {
-                if(height[left] >= leftMax) {
-                    leftMax = height[left];
+        while (left < right) {
+            if (height[left] <= height[right]) {
+                if (leftMax > height[left]) {
+                    totalWater += leftMax - height[left];
                 } else {
-                    water += leftMax - height[left];
+                    leftMax = height[left];
                 }
                 left++;
-            }else{
-                if(height[right] >= rightMax) {
-                    rightMax = height[right];
+            } else {
+                if (rightMax > height[right]) {
+                    totalWater += rightMax - height[right];
                 } else {
-                    water += rightMax - height[right];
+                    rightMax = height[right];
                 }
-                right --;
+                right--;
             }
         }
-        return water;
+        return totalWater;
     }
+
     public static void main(String[] args) {
-        int[] height = {0,2,0,3,0,1,0,4};
-        System.out.println(new TrappingRainWater().trap(height));
+        int[] height = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
+        System.out.println(FindTotalWater(height));
     }
 }
