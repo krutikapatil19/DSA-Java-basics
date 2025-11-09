@@ -7,7 +7,7 @@ public class MinInRotated {
         if(nums[left] <= nums[right]) {
             return nums[left];
         }
-        //Binary search
+        //Modified Binary search
         while(left<right) {
             int mid = (left+right)/2;
 
