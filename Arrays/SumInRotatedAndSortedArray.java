@@ -27,14 +27,14 @@ public class SumInRotatedAndSortedArray {
 
             // If sum smaller, move left forward(next element)
             if (sum < target)
-                left = (left + 1) % n;
+                left = (left + 1) % n; // (the %n ensures circular move)
 
             // If sum greater, move right backward(previous element)
             else
                 right = (n + right - 1) % n;
         }
 
-        // Step 4: If loop ends, no such pair found
+        // Step 4: If loop ends, no two numbers add up to the target
         return false;
     }
 
