@@ -9,7 +9,7 @@ public class MinInRotated {
         }
         //Binary search
         while(left<right) {
-            int mid = left + (right-left)/2;
+            int mid = (left+right)/2;
 
             //If mid element > right element, min must be to the right of mid
             if(nums[mid] > nums[right]) {
@@ -20,9 +20,11 @@ public class MinInRotated {
             }
         }
         return nums[left];
+
     }
     public static void main(String[] args) {
         int []nums = {4,5,6,7,1,2};
         System.out.println(findMin(nums));
     }
 }
+

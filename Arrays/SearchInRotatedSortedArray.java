@@ -30,8 +30,9 @@ public class SearchInRotatedSortedArray {
     }
 
     public static void main(String[] args) {
-        int[] nums = { 3, 4, 5, 6, 0, 1, 2 };
-        int target = 0;
+    //int[] nums = { 3, 4, 5, 6, 0, 1, 2 };
+    int [] nums = {3,4,5,6,0,1,2}; 
+    int target = 5;
         System.out.println(search(nums, target));
 
     }

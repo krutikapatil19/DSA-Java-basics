@@ -7,21 +7,21 @@ public class maxProduct {
         int minEndingHere = nums[0];
         int result = nums[0];
 
-        for(int i = 1; i<n; i++) {
-            int x = nums[i];
+        for(int i = 1; i<n; i++) {  //doubt , why not take i = 0;
+            //int x = nums[i];
             //If we multiply by a negative, max and min swap roles
-            if(x < 0) {
+            if(nums[i] < 0) {
                 int temp = maxEndingHere;
                 maxEndingHere = minEndingHere;
                 minEndingHere = temp;
             }
 
             //Start fresh or extend previous product
-            maxEndingHere = Math.max(x, maxEndingHere * x);
-            minEndingHere = Math.min(x, minEndingHere*x);
+            maxEndingHere = Math.max(nums[i], maxEndingHere * nums[i]);
+            minEndingHere = Math.min(nums[i], minEndingHere*nums[i]);           //doubt , why to keep track of minEndingHere
 
             //Update global maximum
-            result = Math.max(result, maxEndingHere);
+            result = Math.max(result, maxEndingHere);           //doubt - underbracket result ??
         }
         return result;
     }
