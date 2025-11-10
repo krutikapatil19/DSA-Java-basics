@@ -15,8 +15,8 @@ public class ThreeSum {
 
         int n = nums.length;
         for (int i = 0; i < n - 2; i++) { //till n - 2. because we need atleast 2 more elements after the i .
-            if (i > 0 && nums[i] == nums[i - 1])
-                continue; // skip duplicate values for the first element of the triplet ,
+            if (i > 0 && nums[i] == nums[i - 1])//skip duplicates
+                continue; 
             if (nums[i] > 0)
                 break; // no triplets possible
 
@@ -25,7 +25,7 @@ public class ThreeSum {
             while (left < right) { // move right and left inward , to find pairs with nums[i] sum to zero.
                 int sum = nums[i] + nums[left] + nums[right]; // check sum 
                 if (sum == 0) { 
-                    result.add(Arrays.asList(nums[i], nums[left], nums[right])); //store that triplet(whose sum ==0) in res , res acts as a basket .
+                    result.add(List.of(nums[i], nums[left], nums[right])); //store that triplet(whose sum ==0) in res , res acts as a basket .
                     while (left < right && nums[left] == nums[left + 1])
                         left++; // we check if the left pointer element is same as element at left pointer+1 ,
                                 // if its same , then we skip it , i.e. we do left++ , as we want unique triplets , not two same triplets
