@@ -4,23 +4,20 @@ public class SumInRotatedAndSortedArray {
 
         // Step1:Find the pivot (point of rotation)
         int pivot = -1;
-
         for (int i = 0; i < n - 1; i++) {
             if (arr[i] > arr[i + 1]) {
                 pivot = i;
                 break;
             }
         }
-
         // Step2: Initialize two pointers
         int left = (pivot + 1) % n; // smallest element
-        int right = pivot;
+        int right = pivot;// largest element
 
         // Step3: Use two-pointer logic in circular way
-
+        // keep checkin the pairs until both pointers meet
         while (left != right) {
             int sum = arr[left] + arr[right];
-
             // If pair found
             if (sum == target)
                 return true;
@@ -31,7 +28,7 @@ public class SumInRotatedAndSortedArray {
 
             // If sum greater, move right backward(previous element)
             else
-                right = (n + right - 1) % n;
+                right = (n + right - 1) % n;// makes sure the pointer moves backward safely (ex : if i = 0 , then it helps it to move to the left ,i.e to the last index of the arr)
         }
 
         // Step 4: If loop ends, no two numbers add up to the target
