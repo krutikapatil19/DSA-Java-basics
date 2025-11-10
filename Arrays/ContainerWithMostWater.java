@@ -2,7 +2,7 @@ public class ContainerWithMostWater {
     public static int maxArea(int[] height) {
         int left = 0;
         int right = height.length -1;
-        int maxArea = 0;
+        int maxArea = 0;//keeps track of the largest water area found so far.
 
         while(left<right) {
             int width = right - left;
@@ -26,3 +26,7 @@ public class ContainerWithMostWater {
         System.out.println(maxArea(height));
     }
 }
+/*Complexitites 
+Time: O(n)
+Space: O(1)
+*/
