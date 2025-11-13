@@ -8,7 +8,7 @@ public class PairInSortedRotated {
                 pivot = i;// storing the point of rotation(index) in pivot.
             }
         }
-        int left = (pivot + 1 + n) % n;// smallest element
+        int left = (pivot + 1 ) % n;// smallest element
         int right = pivot;// the pivot itself is the largest element
 
         while (left != right) {// keep looping until both pointers meet(it ensures all possible pairs are checked).
@@ -25,7 +25,7 @@ public class PairInSortedRotated {
     }
 
     public static void main(String[] args) {
-        int target = 12;
+        int target = 16;
         int[] arr = { 11, 15, 6, 8, 9, 10 };
         System.out.println(targetSum(arr, target));
     }
