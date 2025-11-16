@@ -21,8 +21,10 @@ public class MergeOverlappingIntervals {
             int end = intervals[i][1];
 
             //Check if the next interval overlaps with the current 
+            //Overlapping happens if next.start <= current.end
             if(start<= current[1]) {
                 //if they overlap -> then merge them , by updating the end.
+                //Take the maximum end to cover both intervals
                 current[1] = Math.max(current[1],end);
             } else {
                 //if they don't overlap -> store current interval
@@ -30,6 +32,7 @@ public class MergeOverlappingIntervals {
                 current = intervals[i];
             }
         }
+        //If not overlapping , add the current interval to the result.
         result.add(current);
     return result.toArray(new int[result.size()][]);
     }
