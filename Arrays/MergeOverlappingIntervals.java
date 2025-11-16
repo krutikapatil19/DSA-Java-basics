@@ -13,12 +13,16 @@ public class MergeOverlappingIntervals {
         //Create a list to store final merged intervals
         List<int[]> result = new ArrayList<>();
 
+        //Go through all intervals starting from index 1. 
         for(int i = 1;i<intervals.length;i++){
+
+            //Extract start and end of the next interval
             int start = intervals[i][0];
             int end = intervals[i][1];
 
+            //Check if the next interval overlaps with the current 
             if(start<= current[1]) {
-                //if they overlap -> then merge them
+                //if they overlap -> then merge them , by updating the end.
                 current[1] = Math.max(current[1],end);
             } else {
                 //if they don't overlap -> store current interval
