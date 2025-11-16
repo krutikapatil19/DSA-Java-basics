@@ -3,8 +3,14 @@ import java.util.Arrays;
 import java.util.ArrayList;
 public class MergeOverlappingIntervals {
     public static int[][] mergingOverlappingIntervals(int[][] intervals){
+
+        //sort all intervals by their start value
         Arrays.sort(intervals,(a,b) -> a[0] - b[0]);
+        
+        //Take the first interval as the"current" interval . We will compare other intervals with this  , and merge if needed.
         int[] current = intervals[0];
+
+        //Create a list to store final merged intervals
         List<int[]> result = new ArrayList<>();
 
         for(int i = 1;i<intervals.length;i++){
@@ -19,7 +25,6 @@ public class MergeOverlappingIntervals {
                 result.add(current);
                 current = intervals[i];
             }
-
         }
         result.add(current);
     return result.toArray(new int[result.size()][]);
