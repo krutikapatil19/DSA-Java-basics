@@ -14,7 +14,7 @@ public class MinimumMergeOperations {
                 left++;
                 count++;
             }else {
-                arr[right]=arr[right]+arr[right-1];
+                arr[right-1]=arr[right]+arr[right-1];
                 right--;
                 count++;
             }
