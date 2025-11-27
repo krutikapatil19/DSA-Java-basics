@@ -9,14 +9,14 @@ public class LongestSubarrayDivisibleByK {
 
         HashMap <Integer, Integer> map = new HashMap<>();
 
-        //remainder 0 happens at index -1
+        //we assume that the remainder 0 was seen at index -1
         map.put (0,-1);
 
         for(int i = 0;i<arr.length;i++){
-            sum += arr[i];
+            sum += arr[i];              //prefix sum 
 
-            //Normalize remainder
-            int rem = ((sum%k)+k)%k;
+            //compute remainder
+            int rem = ((sum%k)+k)%k;//the extra (+k %k) handles negative numbers safely 
 
             //If this remainder is seen first time ->then store it
             if (!map.containsKey(rem)){
@@ -25,7 +25,7 @@ public class LongestSubarrayDivisibleByK {
 
             //If remainder seen before -> we found the subarray
             int length = i - map.get(rem);
-            maxLen = Math.max(maxLen, length);
+            maxLen = Math.max(maxLen, length);//update maxLen with larger of the two 
 
         }return maxLen;
         }
