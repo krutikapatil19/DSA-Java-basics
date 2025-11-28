@@ -1,9 +1,8 @@
 import java.util.*;
 public class LongestSubarrayDivisibleByK {
     public static int longestSubarray(int[] arr, int k){
-        int start = 0;
-        int sum = 0;
-        int maxLen = 0;
+        int sum = 0;//Running prefix sum
+        int maxLen = 0;//Store the longest valid subarray length
 
         //Map to store FIRST occurence of each remainder
 
