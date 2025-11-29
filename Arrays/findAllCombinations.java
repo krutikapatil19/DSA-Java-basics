@@ -8,11 +8,14 @@ public class findAllCombinations {
 
         generate(arr, 0, r, current, result);
 
-        // print result
+        // print all combinations
+
         for (List<Integer> comb : result) {
             System.out.println(comb);
         }
     }
+
+    // Helper function to build combinations
 
     private static void generate(int[] arr, int ind, int r,
                                  List<Integer> current, List<List<Integer>> result) {
