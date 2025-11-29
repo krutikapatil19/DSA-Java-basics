@@ -36,7 +36,7 @@ public class findAllCombinations {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4};
+        int[] arr = {10,15,20,25,30};
         findCombinations(arr, 2);
     }
 }
