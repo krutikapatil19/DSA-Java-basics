@@ -2,23 +2,25 @@ import java.util.Arrays;
 public class leftRightSumDifference {
     public static int[] leftRightDifference(int[] nums) {
         int n = nums.length;
-        int leftSum = 0;
-        int rightSum = 0;
-        int totalSum = 0;
-        int[] answer = new int[nums.length];
+        int leftSum = 0;//sum of elements on the LEFT side
+        int rightSum = 0;//sum of elements on the RIGHT side
+        int totalSum = 0;//sum of ALL elements in the array
+        int[] answer = new int[nums.length];//array to store the FINAL DIFFERENCES
 
         //To calculate total Sum
         for(int i =0;i<n; i++) {
             totalSum += nums[i];
         }
 
-        //Step2: Now rightSum will follow totalSum
+        //At the start , everything is on the RIGHT SIDE.
         rightSum = totalSum;
 
         for(int i = 0;i<n;i++) {
-            rightSum -= nums[i];
-            answer[i] = Math.abs(leftSum - rightSum);
-            leftSum += nums[i];
+
+            //IMP:We do 3 things at every index 
+            rightSum -= nums[i];//to calculate the rightSum for that index 
+            answer[i] = Math.abs(leftSum - rightSum);//to calculate the value at the index to store in answer or result array 
+            leftSum += nums[i];//to calculate the leftSum for that index 
         }
         return answer;
     }
