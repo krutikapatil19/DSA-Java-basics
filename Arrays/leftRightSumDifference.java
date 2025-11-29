@@ -18,9 +18,9 @@ public class leftRightSumDifference {
         for(int i = 0;i<n;i++) {
 
             //IMP:We do 3 things at every index 
-            rightSum -= nums[i];//to calculate the rightSum for that index 
-            answer[i] = Math.abs(leftSum - rightSum);//to calculate the value at the index to store in answer or result array 
-            leftSum += nums[i];//to calculate the leftSum for that index 
+            rightSum -= nums[i]; //remove the current number from the RIGHT SIDE. 
+            answer[i] = Math.abs(leftSum - rightSum); //Find the difference between LEFT and RIGHT . And store it in answer[i]. 
+            leftSum += nums[i];//Add the current number to the LEFT side. 
         }
         return answer;
     }
