@@ -1,42 +1,31 @@
 import java.util.*;
 
 public class findAllCombinations {
-
-    static void findCombinations(int[] arr, int r) {
-        List<Integer> current = new ArrayList<>();
+    public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
+        generate(0,nums, new ArrayList<>(), result);
+        return result;
+    }
+    private static void generate(int index, int[] nums, List<Integer> current, List<List<Integer>>result) {
 
-        generate(arr, 0, r, current, result);
+        //Save the current subset
+        result.add(new ArrayList<>(current));
 
-        // print all combinations
-
-        for (List<Integer> comb : result) {
-            System.out.println(comb);
+        //Try picking every possible next element
+        for(int i = index; i<nums.length; i++) {
+            current.add(nums[i]);
+            generate(i+1, nums, current, result);
+            current.remove(current.size() - 1);
         }
     }
+    public static void main(String[] args){
+        int[] nums = {1,2,3};
 
-    // Helper function to build combinations
+        List<List<Integer>> ans = subsets(nums);
 
-    private static void generate(int[] arr, int ind, int r,
-                                 List<Integer> current, List<List<Integer>> result) {
-
-        // if we formed a combination of size r → save it
-        if (current.size() == r) {
-            result.add(new ArrayList<>(current));
-            return;
+        //Print the subsets
+        for (List<Integer> subset : ans) {
+            System.out.println(subset);
         }
-
-        // loop through all possible remaining choices
-        for (int i = ind; i < arr.length; i++) {
-
-            current.add(arr[i]);           // choose element
-            generate(arr, i + 1, r, current, result); // go deeper
-            current.remove(current.size()-1); // backtrack
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {10,15,20,25,30};
-        findCombinations(arr, 2);
     }
 }
