@@ -1,9 +1,8 @@
 import java.util.*;
 public class MOsAlgorithm {
     
-    static class Query {
+    static class Query {    //it stores Left index , right index and idx(original position) of the query
         int L, R, idx;
-
         Query(int L, int R, int idx) {
             this.L = L;
             this.R = R;
@@ -11,14 +10,14 @@ public class MOsAlgorithm {
         }
     }
 
-    static int currentSum = 0;
+    static int currentSum = 0;  //stores the sum of current range 
 
-    //Add element at index i
+    //Add element at index i ->  its called when we include a new element into the current range .We simple add that element's value to currentSum
     static void add (int i , int[] arr) {
         currentSum += arr[i];
     }
 
-    //Remove element at index i 
+    //Remove element at index i -> Called when we remove an eleemnt from the current range . We subtract that element's value from currentSum
     static void remove(int i , int[] arr){
         currentSum -= arr[i];
     }
