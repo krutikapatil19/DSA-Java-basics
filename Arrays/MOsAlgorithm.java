@@ -25,11 +25,12 @@ public class MOsAlgorithm {
     static int[] solveQueries(int[] arr, Query[] queries){
 
         int n = arr.length;
-        int q = queries.length;
+        int q = queries.length;//no. of queries
 
-        int block = (int) Math.sqrt(n);
+        int block = (int) Math.sqrt(n);//Block size is sqrt of array length
 
-        //Sort queries using MO's ordering
+        //Sort queries using MO's ordering 
+        //(First by block number of L, If same block then by R)
         Arrays.sort(queries, (a,b) -> {
             int blockA = a.L/block;
             int blockB = b.L/block;
@@ -40,24 +41,28 @@ public class MOsAlgorithm {
             return a.R - b.R;
         });
 
-        int[] ans = new int[q];
-        int currL = 0, currR = -1;
+        int[] ans = new int[q];//to store final answers
 
-        //Process queries in sorted order
+        //current range pointers
+        int currL = 0;
+        int currR = -1;
+
+        //Process queries in sorted order ,one by one . We move currL and currR slowly to mactch query range 
         for (Query qu: queries) {
             int L = qu.L;
             int R = qu.R;
 
-            //Move currR -> R
+            //Move currR -> R (expand range to the right)
             while(currR < R){
                 currR ++;
                 add(currR, arr);
             }
+            //Shrink range from the right
             while(currR > R) {
                 remove(currR, arr);
                 currR--;
             }
-            //Move currL -> L
+            //Move currL -> L (shrink range from the left)
             while(currL < L) {
                 remove(currL,arr);
                 currL++;
@@ -66,7 +71,7 @@ public class MOsAlgorithm {
                 currL--;
                 add(currL,arr);
             }
-            //final answer for this query 
+            //store result for this query at original index
             ans[qu.idx]= currentSum;
         }
         return ans;
