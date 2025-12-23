@@ -47,7 +47,7 @@ class Solution {
     public static void main(String[] args) {
         Solution sol = new Solution();
 
-        String digits = "23";   // test input
+        String digits = "24";   
         List<String> ans = sol.letterCombinations(digits);
 
         System.out.println(ans);
