@@ -40,7 +40,7 @@ class Solution {
         for (char c : letters.toCharArray()) {
             current.append(c);
             backtrack(result, digits, map, index + 1, current);
-            current.deleteCharAt(current.length() - 1); // backtrack
+            current.deleteCharAt(current.length() - 1); // backtracking
         }
     }
 
