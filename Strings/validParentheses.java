@@ -31,3 +31,9 @@ public class validParentheses{
         System.out.println(isValid(s));
     }
 }
+
+//We use a stack to store opening brackets and ensure each closing bracket matches the most recent opening one.
+/*Time & Space Complexity
+Time: O(n)
+Space: O(n) (stack)
+*/
