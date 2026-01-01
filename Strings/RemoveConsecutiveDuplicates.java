@@ -15,7 +15,7 @@ public class RemoveConsecutiveDuplicates {
         return ans.toString();
     }
     public static void main(String[] args){
-        String s = "hashhtagg";
+        String s = "IamFeelinggSooHappyyy";
         System.out.println(removeConsecutiveChars(s));
     }
 }
