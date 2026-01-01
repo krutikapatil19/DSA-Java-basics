@@ -18,8 +18,8 @@ public class validParentheses{
 
                 //Check matching pairs
                 if(c ==')' && top !='(') return false;
-                if(c =='{' && top != '}') return false;
-                if(c =='[' && top != ']') return false;
+                if(c =='}' && top != '{') return false;
+                if(c ==']' && top != '[') return false;
             }
         }
 
