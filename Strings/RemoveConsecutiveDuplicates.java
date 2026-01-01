@@ -25,3 +25,4 @@ public class RemoveConsecutiveDuplicates {
 Time → O(n) — only one pass
 Space → O(n) — for answer string
 */
+
