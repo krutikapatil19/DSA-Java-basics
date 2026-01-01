@@ -9,7 +9,7 @@ public class RemoveConsecutiveDuplicates {
             //add first character OR
             //add only if current char is different from last added character
             if(i == 0 || s.charAt(i) != s.charAt(i-1)) {
-                ans.append(s.charAt(i));////append the current character , if its different from the previous one.
+                ans.append(s.charAt(i));//append the current character , if its different from the previous one.
             }
         }
         return ans.toString();
