@@ -1,6 +1,6 @@
 //Find the Longest Common Prefix among a group of strings
 public class LongestCommonPrefix {
-    public String longestCommonPrefix(String[] strs) {
+    public static String longestCommonPrefix(String[] strs) {
         if (strs.length == 0) return "";                                            //if array is empty , return empty prefix
         String prefix = strs[0];                                                    //starts with the first word as the prefix
 
@@ -13,10 +13,8 @@ public class LongestCommonPrefix {
         return prefix;          
     }
     public static void main(String[] args) {
-        String[] input = {"flower","flow","flowingwater"};                         //input words
-        LongestCommonPrefix obj = new LongestCommonPrefix();
-        String result = obj.longestCommonPrefix(input);
-        System.out.println("Longest Common Prefix: "+ result);  
+        String[] strs = {"flower","flow","flowingwater"};                         //input words
+        System.out.println(longestCommonPrefix(strs));  
     }
     }
 
