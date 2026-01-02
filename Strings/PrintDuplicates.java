@@ -5,7 +5,7 @@ public class PrintDuplicates {
             return "No duplicates";
         }
         int[] freq = new int[256];
-        for (char c : s.toCharArray()) {
+        for (char c : s.toCharArray()) {                                    //converts string into characters
             freq[c]++;
         }
 
@@ -13,15 +13,15 @@ public class PrintDuplicates {
         boolean found = false;
 
         for(int i = 0; i<freq.length; i++) {
-            if (freq[i] > 1) {
-                System.out.println(" ' " + (char)i + " ' ->" + freq[i]);
+            if (freq[i] > 1) {                                              //When a character appears more than once , then its a duplicate , print the character along with its frequency.
+                System.out.println(" ' " + (char)i + " ' ->" + freq[i]);    //convert index i back to character, Print Character and its count.
                 found = true;
             }
         }
-        if (!found) {
+        if (!found) {                                                       //No duplicates found   
             return "No duplicates found.";
     }
-    return result.toString();
+    return result.toString();                                               //Converts StringBuilder to String , and return it.
 }
 
     public static void main(String[] args) {
