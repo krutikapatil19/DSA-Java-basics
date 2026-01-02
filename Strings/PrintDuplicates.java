@@ -6,7 +6,7 @@ public class PrintDuplicates {
         }
         int[] freq = new int[256];
         for (char c : s.toCharArray()) {                                    //converts string into characters
-            freq[c]++;
+            freq[c]++;                                                      //counts how many times character c appears , and detects duplcates later , by checking whether the char freq >1
         }
 
         StringBuilder result = new StringBuilder();
