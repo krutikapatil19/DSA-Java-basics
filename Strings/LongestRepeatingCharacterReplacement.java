@@ -30,3 +30,23 @@ public class LongestRepeatingCharacterReplacement {
         System.out.println(characterReplacement(s,k));
     }
 }
+
+/*I used Sliding window to expand or shrink the window size.
+Flow of the solution:
+1.Start with an empty window
+2.Expand window to the right(include more characters)
+3.Keep track of : character counts, most frequent character
+
+*Key Formula:
+characters to change = window size - frequency of most common character
+
+If :
+    window size - maxFreq <= k
+    Then window is valid ✅
+
+Else : 
+    window size - maxFreq >k
+    Then window is INVALID ❌(too many changes needed)
+    
+4.If window becomes invalid() 
+*/
