@@ -43,10 +43,12 @@ characters to change = window size - frequency of most common character
 If :
     window size - maxFreq <= k
     Then window is valid ✅
-
 Else : 
     window size - maxFreq >k
     Then window is INVALID ❌(too many changes needed)
-    
-4.If window becomes invalid() 
+
+4.If window becomes invalid() :
+    move left side FORWARD(shrink window)
+
+5.Always remember the largest valid window
 */
