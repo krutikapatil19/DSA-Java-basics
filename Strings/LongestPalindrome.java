@@ -30,3 +30,8 @@ public class LongestPalindrome {
     
 }
 
+/*Palindrome is checked by expanding from the center (both odd and even length cases).
+For each center, we calculate the maximum palindrome length and then update start/end indices.
+Final answer is extracted using substring(start, end+1) after checking all centres. 
+*/
+
