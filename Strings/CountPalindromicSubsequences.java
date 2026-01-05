@@ -16,6 +16,7 @@ public class CountPalindromicSubsequences {
             for (int i = 0; i <= n - len; i++) {
                 int j = i + len - 1;
 
+                //If characters at both ends are same
                 if (s.charAt(i) == s.charAt(j)) {
                     dp[i][j] = 1 + dp[i + 1][j] + dp[i][j - 1];
                 } else {
