@@ -18,8 +18,11 @@ public class CountPalindromicSubsequences {
 
                 //If characters at both ends are same
                 if (s.charAt(i) == s.charAt(j)) {
+
+                    //Include palindromes from left and right + new one formed
                     dp[i][j] = 1 + dp[i + 1][j] + dp[i][j - 1];
                 } else {
+                    //Add left and right, subtract overlapping middle part
                     dp[i][j] = dp[i + 1][j] + dp[i][j - 1] - dp[i + 1][j - 1];
                 }
             }
