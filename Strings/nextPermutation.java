@@ -40,3 +40,15 @@ public class nextPermutation {
         System.out.println(Arrays.toString(nums));
     }
 }
+
+/*
+Complexities;
+TIME: O(n)
+Space: O(1) in-place 
+
+Approach used:
+- Find the first index from the right where nums[i] < nums[i+1] (pivot point)
+- Swap the pivot with the smallest element greater than it on the right side.
+- Reverse the elements after the pivot to get the next smallest permutation.
+*/
+
