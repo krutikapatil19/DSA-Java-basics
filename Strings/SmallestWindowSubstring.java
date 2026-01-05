@@ -48,3 +48,14 @@ public class SmallestWindowSubstring {
         System.out.println(smallestWindow(s, p));
     }
 }
+
+/*
+Complexities:
+Time: O(n) - single pass with sliding window
+Spce: O(1) - fixed size freq arrays.
+
+*Approach :
+- We use a sliding window to scan the main String and include all required characters.
+- The window is expanded until all characters of the pattern are matched, then shrunk to minimum size.
+- The smallest valid window found during this process is returned as an answer.
+*/
