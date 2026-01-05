@@ -2,6 +2,8 @@ public class CountPalindromicSubsequences {
 
     static long countPS(String s) {
         int n = s.length();
+
+        // dp[i][j] stores number of palindromic subsequences in s[i..j]
         long[][] dp = new long[n][n];
 
         // single characters are palindromes
