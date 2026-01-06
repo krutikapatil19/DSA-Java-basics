@@ -32,7 +32,7 @@ public class CountPalindromicSubsequences {
     }
 
     public static void main(String[] args) {
-        String s = "aaa";
+        String s = "aaabba";
         System.out.println(countPS(s)); 
     }
 }
