@@ -41,7 +41,7 @@ public class WildcardStringMatching {
     }
     public static void main(String[] args) {
         String text = "baaabab";
-        String pattern = "ba*a?";
+        String pattern = "baa*a?";
 
         System.out.println(isMatch(text, pattern));
     }
