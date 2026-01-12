@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class MergeOverlappingIntervals {
     public static int[][] mergingOverlappingIntervals(int[][] intervals) {
 
+        if(intervals.length == 0) return new int[0][];
+
         // sort all intervals by their start value
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
 
