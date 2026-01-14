@@ -13,9 +13,9 @@ public class minOperationTransformation {
          for(int i = 0;i<A.length(); i++){
             char ch = A.charAt(i);
             if(map.containsKey(ch)) {
-                map.put(ch, map.get(ch) + 1);
+                map.put(ch, map.get(ch) + 1);           //If char exists , increase count 
             } else {
-                map.put(ch, 1);
+                map.put(ch, 1);                         //else add with 1
             }
          }
 
