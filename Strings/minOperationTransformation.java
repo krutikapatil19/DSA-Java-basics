@@ -10,6 +10,14 @@ public class minOperationTransformation {
         //2.Checking if A and B have same characters (frequency check)
          //i have doubt in writing this , i will try
          HashMap<Character, Integer> map = new HashMap<>();
+         for(int i = 0;i<A.length(); i++){
+            char ch = A.charAt(i);
+            if(map.containsKey(ch)) {
+                map.put(ch, map.get(ch) + 1);
+            } else {
+                map.put(ch, 1);
+            }
+         }
 
 
          //3.Initializing pointers from END of both strings
