@@ -19,6 +19,7 @@ public class MinimumWindowSubstring {
         int minLen = Integer.MAX_VALUE;
         int startIndex = 0;
 
+        // Sliding window: expand with right, shrink with left
         while (right < s.length()) {
             //expanding the window
             char c = s.charAt(right);       //take current character
