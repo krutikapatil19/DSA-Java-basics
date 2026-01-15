@@ -2,12 +2,12 @@ import java.util.HashMap;
 public class MinOperationTransformation {
     public static int minOperations(String A, String B) {
 
-        //If lengths are different -> return -1
+        //1.If lengths are different -> return -1
         if (A.length() != B.length()){
             return -1;
         }
 
-        //2.// Step 2: Check if A and B contain the same characters with same frequency
+        //2.Check if A and B contain the same characters with same frequency
 
         HashMap<Character, Integer> map = new HashMap<>();
          for(int i = 0;i<A.length(); i++){
@@ -44,7 +44,7 @@ public class MinOperationTransformation {
 
          //4.Traverse Strings from right to left
          //Match characters from the end; if mismatch occurs, move characters in A to front.
-         
+
          while(i >= 0 && j>= 0) {
             
             if (A.charAt(i) == B.charAt(j)){
