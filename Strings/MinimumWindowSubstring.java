@@ -70,4 +70,8 @@ public class MinimumWindowSubstring {
 Used sliding window with two pointers to dynamically maintain a valid substring.
 Expand the window until all characters of t are matched, then shrinks to minimum size.
 Tracks the smallest valid window found during the process and returns it.
- */
+ 
+Complexitites:
+Time Complexity: O(n) — sliding window with two pointers
+Space Complexity: O(1) — fixed-size frequency array
+*/
