@@ -18,6 +18,16 @@ public class minOperationTransformation {
                 map.put(ch, 1);                         //else add with 1
             }
          }
+         //Reducing characters of B 
+         for(int i = 0; i<B.length(); i++){
+            char ch = B.charAt(i);
+
+            if(!map.containsKey(ch)){
+                return -1;
+            } else {
+                map.put(ch, map.get(ch) - 1);
+            }
+         }
 
 
          //3.Initializing pointers from END of both strings
