@@ -29,6 +29,12 @@ public class minOperationTransformation {
             }
          }
 
+         for(int val : map.values()) {
+            if(val != 0) {
+                return -1;
+            }
+         }
+
 
          //3.Initializing pointers from END of both strings
          int i = A.length() - 1;
