@@ -7,13 +7,15 @@ public class BoyerMooreSearch {
         for(int i = 0; i<256; i++) {
             badChar[i] = -1;                //setting all values to -1.(as if this character does not exist in the pattern).
         }
-        
+
             //store last occurrence of each character
             for(int i = 0; i<pattern.length(); i++) {
                 badChar[pattern.charAt(i)] = i;
             }
         return badChar;//returns the completed table.
     }
+
+
 
     //Search "pattern" in text
     public static void search(String text, String pattern) {
@@ -22,7 +24,7 @@ public class BoyerMooreSearch {
 
         if(m > n) return;
 
-        int[] badchar = buildBadCharTable(pattern);         //builds the BadChar Table for the pattern.
+        int[] badChar = buildBadCharTable(pattern);         //builds the BadChar Table for the pattern.
 
         int shift = 0;      //shift-where is the pattern currently placed in the text.
 
