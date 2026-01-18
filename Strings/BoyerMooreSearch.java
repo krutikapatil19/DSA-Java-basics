@@ -16,7 +16,6 @@ public class BoyerMooreSearch {
     }
 
 
-
     //Search "pattern" in text
     public static void search(String text, String pattern) {
         int n = text.length();
@@ -54,7 +53,7 @@ public class BoyerMooreSearch {
         }
     }
     public static void main(String[] args) {
-        String text = "ABAAABCD";
+        String text = "ABABCABCD";
         String pattern = "ABC";
 
         search(text, pattern);
