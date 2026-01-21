@@ -33,10 +33,8 @@ public class RearrangeElementsBySign {
         }
         return ans;
     }
-
-    
     public static void main(String[] args) {
-        int[] nums = {3,-1,-2,5,8,-6,2,-4};
+        int[] nums = {3,-1,-2,5,-6,2,-4};
 
         int[] result = rearrangeElements(nums);
         System.out.println(Arrays.toString(result));
