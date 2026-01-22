@@ -1,5 +1,5 @@
 import java.util.HashMap;
-public class TwoSum {
+public class TwoSumUsingHashMap {
 
     public void twoSum(int[] arr, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();                 //create the hashmap to store numbers and their indices
