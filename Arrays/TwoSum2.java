@@ -26,3 +26,5 @@ public class TwoSum2 {
         System.out.println(Arrays.toString(twoSum(nums,target)));
     }
 }
+
+//This is Two-SumII Problem (Leetcode). The array given is sorted in this , and we have to return the two numbers index(1-based indexing).
