@@ -5,18 +5,20 @@ public class TwoSum2 {
         int i = 0;
         int j = nums.length-1;
 
+        //run until both pointers meet
         while(i<j){
             int sum = nums[i]+nums[j];
 
             if(sum==target){
                 return new int[]{i+1,j+1};
-            }else if (sum> target){
+            }else if (sum> target){     //if sum is greater than target , then right pointer towards left
                 j--;
-            } else {
+            } else {                    //if sum is lesser , then move left pointer forward
                 i++;
             }
         }
 
+        //if no pair found
         return new int[]{-1,-1};
     }
     public static void main(String[] args){
