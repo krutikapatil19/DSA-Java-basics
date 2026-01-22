@@ -22,7 +22,7 @@ public class TwoSumUsingHashMap {
     public static void main(String[] args){
         int[] arr = {3,5,8,16,2,10};
         int target = 12;
-        new TwoSum().twoSum(arr, target);
+        new TwoSumUsingHashMap().twoSum(arr, target);
     }
 }
 
