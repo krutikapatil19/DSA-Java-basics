@@ -26,4 +26,5 @@ public class TwoSumUsingHashMap {
     }
 }
 
-   
+//Leetcode TwoSumI - we use HashMap for that TwoSum problem ,in which the array is not sorted , and we have to return the Indices of the two numbers  , not the numbers itself.
+//Leetcode TwoSum II - for this problem , we use Two Pointers Approach, as we have sorted Array given .  
