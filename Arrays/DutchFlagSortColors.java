@@ -32,3 +32,11 @@ public class DutchFlagSortColors {
         System.out.println(Arrays.toString(sortColors(nums)));
     }
 }
+
+/* I used 3 pointers in this 
+ low - where the next 0 should go.
+ mid - current element we are checking
+ high - where the next 2 should go.
+
+ In this , mid moves through the array , and puts 0 to the left side, 2 to the right side , 1 stays in the middle.
+ */
