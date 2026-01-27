@@ -1,5 +1,6 @@
+import java.util.Arrays;
 public class sortArrayByParity {
-    public static int[] sortArrayByParity(int[] nums){
+    public static int[] ArraySortByParity(int[] nums){
         int left = 0;
         int right = nums.length - 1;
 
@@ -24,6 +25,6 @@ public class sortArrayByParity {
     }
     public static void main(String[] args){
         int[] nums = {3,8,7,9,4,2};
-        System.out.println(Arrays.toString(sortArrayByParity(nums)));
+        System.out.println(Arrays.toString(ArraySortByParity(nums)));
     }
 }
