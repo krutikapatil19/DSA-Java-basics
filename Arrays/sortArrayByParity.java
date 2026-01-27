@@ -6,12 +6,15 @@ public class sortArrayByParity {
 
         while(left<right){
 
+            //if left is already even, then its in correct place
             if(nums[left]%2 ==0){
             left++;
             }
+            //if right is already odd, its in correct place
             else if (nums[right] % 2 == 1){
                 right --;
             }
+            //if left is odd, and right is even , swap them
             else {
                 int temp = nums[left];
                 nums[left] = nums[right];
