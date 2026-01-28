@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class sortArrayByParityII {
     public static int[] sortByParityII(int[] nums){
         int even = 0;
@@ -24,7 +25,7 @@ public class sortArrayByParityII {
     public static void main(String[] args){
         int[] nums = {2,4,5,7};
 
-        System.out.println(sortByParityII(nums));
+        System.out.println(Arrays.toString(sortByParityII(nums)));
     }
     
 }
