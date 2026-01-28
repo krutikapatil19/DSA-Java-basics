@@ -29,7 +29,7 @@ public class sortArrayByParityII {
         return nums;
     }
     public static void main(String[] args){
-        int[] nums = {2,4,5,7};
+        int[] nums = {2,4,5,7,8};
 
         System.out.println(Arrays.toString(sortByParityII(nums)));
     }
