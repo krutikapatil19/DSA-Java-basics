@@ -26,3 +26,8 @@ public class SquaresOfSortedArray {
         System.out.println(Arrays.toString(squaresOfArray(nums)));
     }
 }
+
+//I solved this problem using the two-pointer approach , in which two pointers are used ,i and j , i will start from 0 ,iterate through the loop ,and j will start from last element.
+
+/*Time Complexity : O(n)
+Space Complexity : O(n)*/
