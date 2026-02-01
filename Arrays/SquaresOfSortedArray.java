@@ -17,11 +17,11 @@ public class SquaresOfSortedArray {
             if(squareLeft < squareRight){
                 result[k] = squareRight;    //put right square       
                 j--;                        //move right pointer              
-                k--;
+                k--;                        //decrease k (to the left side)
             } else {
                 result[k] = squareLeft;     //if Left square is greater than right square , put it at kth position
                 i++;                        //move left pointer
-                k--;
+                k--;                        //move k 
             }
         }
         return result;
@@ -32,7 +32,8 @@ public class SquaresOfSortedArray {
     }
 }
 
-//I solved this problem using the two-pointer approach , in which two pointers are used ,i and j , i will start from 0 ,iterate through the loop ,and j will start from last element.
+//I solved this problem using the two-pointer approach , in which two pointers are used ,i and j , i will start from beginning,  j will start from end.
+//Compare squares → put bigger at end → move pointer → decrease k
 
 /*Time Complexity : O(n) - one pass 
 Space Complexity : O(n) - result array */
