@@ -14,7 +14,7 @@ public class RemoveAllOccurencesOFVal {
         return j;
     }
     public static void main(String[] args){
-        int[] nums = {0,1,2,2,0,4,-2};
+        int[] nums = {0,1,2,2,0,4,2};
         int val = 2;
         System.out.println(removeOccurencesOfNumber(nums,val));
     }
