@@ -11,7 +11,7 @@ public class MaxSumSubarrayOfSizeK {
             currSum += nums[i];
         }
 
-            //first window itsel
+            //first window itself can be the answer
             maxSum = currSum;
         
         for(int i = k;i<nums.length;i++){
