@@ -1,6 +1,7 @@
 public class MaxSumSubarrayOfSizeK {
     public static int maximumSumContageousArray(int[] nums,int k){
       
+        if(nums== null|| nums.length<k ) return -1;
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
 
