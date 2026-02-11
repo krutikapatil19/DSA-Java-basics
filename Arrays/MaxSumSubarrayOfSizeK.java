@@ -6,13 +6,14 @@ public class MaxSumSubarrayOfSizeK {
 
         for(int i = 0;i<k;i++){
             currSum += nums[i];
-            maxSum = currSum;
+            
         }
+            maxSum = currSum;
         
         for(int i = k;i<nums.length;i++){
             currSum = currSum - nums[i-k] + nums[i];
+            Math.max(currSum, maxSum);
         }
-        Math.max(currSum, maxSum);
         return maxSum;
     }
     public static void main(String[] args){
