@@ -1,4 +1,3 @@
-import java.util.Arrays;
 public class MaxSumSubarrayOfSizeK {
     public static int maximumSumContageousArray(int[] nums,int k){
       
