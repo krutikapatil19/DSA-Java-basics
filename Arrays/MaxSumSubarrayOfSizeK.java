@@ -15,8 +15,8 @@ public class MaxSumSubarrayOfSizeK {
             maxSum = currSum;
         
         for(int i = k;i<nums.length;i++){
-            currSum = currSum - nums[i-k] + nums[i];
-            maxSum = Math.max(currSum, maxSum);
+            currSum = currSum - nums[i-k] + nums[i];    //remove the leftmost element , and add the next element from right
+            maxSum = Math.max(currSum, maxSum);         
         }
         return maxSum;
     }
